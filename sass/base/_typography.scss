@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$mainFont: 'Roboto', Helvetica, Arial, 'Liberation Sans', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body, button, input {
+    font-family: $mainFont;
+}
+
+em {
+    font-weight: bold;
+    text-decoration: underline;
+}

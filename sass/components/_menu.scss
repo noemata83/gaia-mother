@@ -1,0 +1,15 @@
+.menu {
+    stroke-width: 6px;
+    stroke-linecap: square;
+    stroke: #fdfefd;
+    background-color: transparent;
+
+    path#top, path#bottom {
+        stroke-dasharray: 24rem 91rem;
+    }
+
+    path#middle {
+        stroke-dasharray: 24rem 91rem;
+    }
+}
+
