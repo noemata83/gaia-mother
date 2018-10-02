@@ -2,7 +2,7 @@ const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: ["@babel/polyfill", "./assets/js/app.js"],
+  entry: ["@babel/polyfill", "./assets/js/src/app.js"],
   output: {
     path: path.resolve(__dirname, "assets/js"),
     filename: "bundle.js"
@@ -21,7 +21,7 @@ module.exports = {
                   "targets": {
                     "browsers": ["> 1%", "last 2 versions", "ie >= 11"]
                     }
-                }], '@babel/preset-react'],
+                }]],
               babelrc: false
           },
         }

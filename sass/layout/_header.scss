@@ -4,8 +4,8 @@
     left: 0;
     padding-top: 3.5rem;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 13%; // trying a percentage here. Not sure how this will work.
     // z-index: 1;
     &__graphic {
         margin-right: 3rem;
@@ -25,13 +25,13 @@
         color: $color-green;
         // padding-top: 6rem;
         font-size: 1.8rem;
-        height: 80%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        padding-bottom: .5rem;
     }
     &__menu {
-        width: 13rem;
+        flex-basis: 100%;
         margin-left: auto;
         button {
             position: absolute;

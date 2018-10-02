@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the template that displays all of the <header> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -20,39 +20,26 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gaia-mother' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$gaia_mother_description = get_bloginfo( 'description', 'display' );
-			if ( $gaia_mother_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $gaia_mother_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header class="header">
+            <img class="header__graphic" src="<?php echo get_theme_file_uri('assets/img/logo_graphic.png')?>" alt="" />
+            <h1 class="header__logo-container">
+								<img title="Gaia Enterprises" class="header__logo" src="<?php echo get_theme_file_uri('assets/img/gaia_logo.png') ?>" alt="Gaia Enterprises">
+            </h1>
+            <p class="header__tagline">Where Consciousness Meets Innovation.</p>
+						<nav id="header__menu" class="header__menu">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gaia-mother' ); ?></button>
+							<?php
+							wp_nav_menu( array(
+								'theme_location' => 'main_menu',
+								'menu_id'        => 'primary-menu',
+							) );
+							?>
+						</nav><!-- #site-navigation -->
+	</header>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gaia-mother' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
