@@ -34,14 +34,14 @@
     height: 5rem;
     width: 5rem;
     border-radius: 100%;
-    transition: transform .3s ease-in;
-    background: white;
+    transition: transform .3s;
+    background: rgba($color-green, .75);
     transform: scale(0);
     &.open {
       transform: scale(80);
-      background: rgba(255,255,255,.75);
+      background: rgba($color-green, .75);
       // transform: translateX(0);
-      transition: transform .5s ease-in;
+      transition: transform .3s;
     }
   }
 
