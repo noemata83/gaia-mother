@@ -1105,6 +1105,31 @@ em {
     font-size: 2rem; }
   .hero.backgrounded {
     filter: blur(25px); }
+  .hero__logo {
+    position: absolute;
+    top: 10%;
+    right: 10%; }
+  .hero__product {
+    position: absolute;
+    right: 14%;
+    bottom: -20%;
+    z-index: 2; }
+  .hero__pitch {
+    z-index: -1;
+    position: absolute;
+    left: -20rem;
+    top: 31%;
+    padding: 2rem;
+    font-size: 2rem;
+    color: white; }
+  .hero__spacer {
+    width: 100%;
+    padding-bottom: 15%;
+    background-color: #e8e8e8; }
+  .hero__validator {
+    position: absolute;
+    left: -20rem;
+    top: 55%; }
 
 .landing-nav {
   position: absolute;

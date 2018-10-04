@@ -56,8 +56,35 @@
         filter: blur(25px);
     }
 
-    @include respond(tab-port) {
-        
+    &__logo {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+      }
+    &__product {
+        position: absolute;
+        right: 14%;
+        bottom: -20%;
+        z-index: 2;
+    }
+    &__pitch {
+        z-index: -1;
+        position: absolute;
+        left: -20rem;
+        top: 31%;
+        padding: 2rem;
+        font-size: 2rem;
+        color: white;
+    }
+    &__spacer {
+        width: 100%;
+        padding-bottom: 15%;
+        background-color: #e8e8e8;
+    }
+    &__validator {
+        position: absolute;
+        left: -20rem;
+        top: 55%;
     }
 }
 
