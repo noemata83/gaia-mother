@@ -1019,7 +1019,7 @@ em {
     margin-left: auto; }
     .header__menu button {
       position: absolute;
-      top: 50%;
+      top: 8rem;
       transform: translateY(-50%);
       border: none;
       padding: 0;
