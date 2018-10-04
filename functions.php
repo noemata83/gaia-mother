@@ -123,7 +123,6 @@ function gaia_mother_scripts() {
 	wp_enqueue_style( 'gaia-mother-style', get_stylesheet_uri() );
 	wp_enqueue_style('FontAwesome', 'https://use.fontawesome.com/releases/v5.0.7/css/all.css');
 
-
 	wp_enqueue_script( 'gaia-mother-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'gaia-mother-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
