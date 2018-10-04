@@ -987,8 +987,8 @@ em {
     margin-right: 3rem; }
     @media only screen and (max-width: 37.5em) {
       .header__graphic {
-        height: 8rem;
-        width: 8rem;
+        height: 6rem;
+        width: 7rem;
         margin-right: 1rem; } }
   .header__logo {
     width: 100%;
@@ -1110,7 +1110,7 @@ em {
     padding: 4rem 0rem 4rem 5rem;
     color: #a0a3a5;
     font-size: 1.8rem;
-    grid-template: "a  b" 1fr "c  d" 1fr / 1fr 1fr;
+    grid-template: "a  b" 1fr "c  d" 1fr / 1fr 1fr;
     grid-row-gap: 4rem; }
     .navigation__contact-phone {
       grid-area: a; }
