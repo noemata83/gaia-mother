@@ -25,11 +25,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gaia-mother' ); ?></a>
 
 	<header class="header">
-            <img class="header__graphic" src="<?php echo get_theme_file_uri('assets/img/logo_graphic.png')?>" alt="" />
+		<div class="header__container">
             <h1 class="header__logo-container">
 								<img title="Gaia Enterprises" class="header__logo" src="<?php echo get_theme_file_uri('assets/img/gaia_logo.png') ?>" alt="Gaia Enterprises">
             </h1>
-            <p class="header__tagline">Where Consciousness Meets Innovation.</p>
+            <p class="header__tagline">Tagline goes here.</p>
 						<nav id="header__menu" class="header__menu">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gaia-mother' ); ?></button>
 							<?php
@@ -38,7 +38,8 @@
 								'menu_id'        => 'primary-menu',
 							) );
 							?>
-						</nav><!-- #site-navigation -->
+						</nav>
+		</div><!-- #site-navigation -->
 	</header>
 
 

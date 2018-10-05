@@ -981,10 +981,15 @@ em {
   left: 0;
   z-index: 1000;
   background-color: white;
-  padding-top: 3.5rem;
+  padding: 1.5rem 0;
   display: flex;
-  flex-wrap: wrap;
   width: 100%; }
+  .header__container {
+    max-width: 115rem;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    height: 100%; }
   .header__graphic {
     margin-right: 3rem; }
     @media only screen and (max-width: 37.5em) {
@@ -993,10 +998,7 @@ em {
         width: 7rem;
         margin-right: 1rem; } }
   .header__logo {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
+    width: 100%; }
     .header__logo-container {
       flex-basis: 17rem;
       margin-right: 2rem;
@@ -1017,7 +1019,6 @@ em {
         flex-basis: 14rem;
         padding-bottom: 1rem; } }
   .header__menu {
-    flex-basis: 100%;
     margin-left: auto; }
     .header__menu button {
       position: absolute;
@@ -1055,7 +1056,7 @@ em {
   transform: rotate(-33deg); }
 
 #main {
-  padding-top: 14rem; }
+  padding-top: 11rem; }
 
 .landing-page {
   height: 100vh;
