@@ -49,6 +49,9 @@
         }
     }
     &__menu {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
         button {
             position: absolute;
             top: 8rem;
@@ -97,16 +100,19 @@
 
 .menu {
     flex-grow: 1;
+    display: flex;
     width: 100%;
     height: 100%;
-    ul {
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        li a, li a:visited {
-            color: #959595;
-            font-size: 2.8rem;
-            text-decoration: none;
+    align-items: flex-end;
+    justify-content: flex-end;
+    li a, li a:visited {
+        color: #959595;
+        font-size: 2.8rem;
+        text-decoration: none;
+    }
+    li {
+        &:not(:last-child) {
+            margin-right: 4rem;
         }
     }
 }

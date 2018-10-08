@@ -32,12 +32,13 @@
             <p class="header__tagline">Tagline goes here.</p>
 						<nav id="header__menu" class="header__menu">
 							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gaia-mother' ); ?></button>
-							<?php
-							wp_nav_menu( array(
-								'theme_location' => 'main_menu',
-								'menu_id'        => 'primary-menu',
-							) );
-							?>
+							<ul>
+								<li><a href="/about/">About</a></li>
+								<li><a href="/customer-info/">Customer Info</a></li>
+								<li><a href="/resources/">Resources</a></li>
+								<li><a href="/shop/">Shop</a></li>
+								<li><a href="/cart/">Cart</a></li>
+							</ul>
 						</nav>
 		</div><!-- #site-navigation -->
 	</header>
