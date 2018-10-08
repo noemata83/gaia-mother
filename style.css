@@ -981,12 +981,12 @@ em {
   left: 0;
   z-index: 1000;
   background-color: white;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   display: flex;
   width: 100%; }
   .header__container {
     max-width: 115rem;
-    margin: 0 auto;
+    margin: 0 10%;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1067,7 +1067,7 @@ em {
       text-decoration: none; }
 
 #main {
-  padding-top: 11rem; }
+  padding-top: 11.5rem; }
 
 .landing-page {
   height: 100vh;
@@ -1120,7 +1120,10 @@ em {
   .hero__logo {
     position: absolute;
     top: 10%;
-    right: 10%; }
+    right: 10%;
+    width: 40%; }
+    .hero__logo img {
+      width: 100%; }
   .hero__product {
     position: absolute;
     width: 32%;
