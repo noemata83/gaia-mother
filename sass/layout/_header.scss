@@ -7,9 +7,9 @@
     padding: 1rem 0;
     display: flex;
     width: 100%;
+    box-shadow: 0px 8px 8px rgba(0,0,0,.5);
     // z-index: 1;
     &__container {
-        max-width: 115rem;
         margin: 0 10%;
         display: flex;
         justify-content: space-between;
