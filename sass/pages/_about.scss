@@ -1,0 +1,65 @@
+#about {
+    padding-top: 12rem;
+    .hero {
+        background-image: url('assets/img/about_hero.jpg');
+        background-position-y: 50%;
+        &__text {
+            top: 15%;
+        }
+        &__copy {
+            font-size: 2.4rem;
+        }
+    }
+    
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 6rem;
+        margin-bottom: 2rem;
+    }
+    .sustainability {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 12rem;
+        p {
+            font-size: 2rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .graphic {
+        background-image: url('assets/img/about_landscape.jpg');
+        width: 100%;
+        padding-bottom: 60%;
+    }
+
+    .mission {
+        position: relative;
+        background-image: url('assets/img/child_and_pets.jpg');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-position-y: 0%;
+        padding-bottom: 35%;
+        &__text {
+            text-align: center;
+            position: absolute;
+            width: 64rem;
+            top: 3rem;
+            right: 15%;
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+    .values {
+        margin-top: 4rem;
+        p {
+            font-size: 2rem;
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
