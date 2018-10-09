@@ -17,11 +17,12 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main blog">
-			<div class="header">
-				<p class="header__text">
-					<?php echo get_field('header_copy');?>
+			<div class="blog__header">
+				<p class="blog__header-copy">
+					<?php echo get_field('header_copy',  get_option('page_for_posts'));?>
 				</p>
-			</div>
+            </div>
+            <div class="blog__content">
 		<?php
 		if ( have_posts() ) :
 
@@ -53,11 +54,13 @@ get_header();
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-		?>
+        
+        get_sidebar();
+        ?>
+        </div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
