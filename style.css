@@ -1008,7 +1008,7 @@ em {
   font-size: 3rem;
   font-weight: bold;
   text-transform: capitalize;
-  flex-basis: 45%;
+  flex-basis: 60%;
   margin-right: auto;
   border-left: 1px solid #d8dee1;
   padding-left: 2rem; }
@@ -1028,6 +1028,20 @@ em {
 
 .post__content {
   padding: 2rem 0 4.5rem 0; }
+
+.wpp-title {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-weight: bold; }
+
+.wpp-list li a, .wpp-list li a:link {
+  text-decoration: none;
+  color: #00a0e0; }
+
+.wpp-list li {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #d8dee1; }
 
 .header {
   position: fixed;
@@ -1494,7 +1508,7 @@ em {
 
 .blog__sidebar {
   flex-basis: 25%;
-  padding-top: 9.2rem; }
+  padding-top: 8rem; }
 
 .blog__post {
   border-bottom: 1px solid #d8dee1;

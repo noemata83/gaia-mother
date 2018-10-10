@@ -1,0 +1,19 @@
+.wpp {
+    &-title {
+        font-size: 3rem;
+        text-align: center;
+        padding-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    &-list {
+        li a, li a:link {
+            text-decoration: none;
+            color: #00a0e0;
+        }
+        li {
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #d8dee1;
+        }
+    }
+}
