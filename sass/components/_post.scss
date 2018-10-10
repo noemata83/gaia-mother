@@ -1,0 +1,45 @@
+.post {
+    &__frontmatter {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #d8dee1;
+    }
+    &__category {
+        flex-basis: 37%;
+        padding-bottom: 1rem;
+        a, a:link, a:visited {
+            color: #00a0e0;
+            font-size: 7rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        flex-basis: 45%;
+        margin-right: auto;
+        border-left: 1px solid #d8dee1;
+        padding-left: 2rem;
+    }
+
+    &__author {
+        text-transform: uppercase;
+        color: #00a0e0;
+        font-size: 2rem;
+        flex-basis: 30%;
+        padding: 1rem 0;
+    }
+
+    &__comments {
+        text-transform: uppercase;
+        color: #00a0e0;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    &__content {
+        padding: 2rem 0 4.5rem 0;
+    }
+}
