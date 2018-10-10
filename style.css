@@ -1053,12 +1053,19 @@ em {
   display: flex;
   width: 100%;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5); }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      width: 100vw;
+      padding: 0; } }
   .header__container {
     margin: 0 10%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .header__container {
+        margin: 0 1.5rem; } }
   .header__graphic {
     margin-right: 3rem; }
     @media only screen and (max-width: 37.5em) {
@@ -1101,6 +1108,14 @@ em {
     .header__menu svg {
       height: 5rem;
       width: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__menu ul {
+        display: none; } }
+    .header__menu .menu-toggle {
+      position: relative;
+      margin-left: auto;
+      top: inherit;
+      transform: none; }
   @media only screen and (max-width: 56.25em) {
     .header {
       background: white;
@@ -1193,6 +1208,12 @@ em {
   padding-top: 10.5rem; }
   #main.front-page section {
     margin: 0 10%; }
+    @media only screen and (max-width: 37.5em) {
+      #main.front-page section {
+        margin: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    #main {
+      padding-top: 8rem; } }
 
 .site-content {
   padding-bottom: 0; }
@@ -1211,6 +1232,9 @@ em {
   padding-bottom: 41%;
   position: relative;
   z-index: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      padding-bottom: 100%; } }
   .hero__text {
     color: white;
     position: absolute;
@@ -1252,12 +1276,18 @@ em {
     width: 40%; }
     .hero__logo img {
       width: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__logo {
+        display: none; } }
   .hero__product {
     position: absolute;
     width: 32%;
     right: 14%;
     bottom: -20%;
     z-index: 2; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__product {
+        width: 100%; } }
   .hero__pitch {
     z-index: -1;
     position: absolute;
@@ -1331,6 +1361,10 @@ em {
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 17rem; }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      display: block;
+      padding-top: 4rem; } }
   .about__image {
     flex-basis: 35%; }
   .about__demoImage {
@@ -1346,6 +1380,13 @@ em {
       line-height: 1.5;
       list-style: decimal;
       list-style-position: inside; }
+      @media only screen and (max-width: 37.5em) {
+        .about__text ol li {
+          margin-bottom: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .about__text {
+        text-align: center;
+        padding: 2rem 4rem; } }
   .about__header {
     font-size: 4.6rem;
     font-weight: bold;
@@ -1356,7 +1397,11 @@ em {
   .about__guarantee {
     margin-top: 13rem;
     flex-basis: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .about__guarantee {
+        margin-top: 10rem; } }
     .about__guarantee-headline {
+      padding: 0 4rem;
       font-size: 4.6rem;
       font-weight: bold;
       text-align: center;
@@ -1364,16 +1409,37 @@ em {
     .about__guarantee p {
       padding: 0 5rem;
       text-align: center; }
+      @media only screen and (max-width: 56.25em) {
+        .about__guarantee p {
+          padding: 0; } }
   .about__validators {
     display: flex;
     margin-bottom: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .about__validators {
+        flex-wrap: wrap;
+        justify-content: space-between; } }
+    @media only screen and (max-width: 37.5em) {
+      .about__validators {
+        padding: 0 4rem; } }
   .about__validator {
     flex-basis: 25%;
     flex-shrink: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .about__validator {
+        flex-basis: 45%;
+        padding: 1rem; } }
     .about__validator img {
       max-height: 17rem;
       width: auto;
       margin-bottom: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .about__validator img {
+          max-height: 12rem;
+          max-width: 80%;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 2rem; } }
     .about__validator p {
       text-transform: uppercase;
       font-weight: bold;
@@ -1381,6 +1447,9 @@ em {
       text-align: center; }
     .about__validator:not(:last-child) {
       margin-right: 8rem; }
+      @media only screen and (max-width: 56.25em) {
+        .about__validator:not(:last-child) {
+          margin-right: 0; } }
 
 .graphic {
   width: 100%;
@@ -1421,6 +1490,35 @@ em {
 
 .retailers__logo {
   width: 100%; }
+
+.mobile-cta {
+  display: none;
+  padding-top: 15rem;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .mobile-cta {
+      display: block; } }
+  .mobile-cta a:link, .mobile-cta a:visited {
+    color: white;
+    text-decoration: none; }
+  .mobile-cta-btn {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    color: white;
+    font-size: 2.8rem;
+    border-radius: 8px;
+    padding: 3.6rem; }
+
+.mobile-copy {
+  display: none;
+  background-color: #d7dde1; }
+  @media only screen and (max-width: 37.5em) {
+    .mobile-copy {
+      display: block;
+      text-align: center;
+      padding: 2rem 4rem; } }
 
 #about {
   padding-top: 12rem; }

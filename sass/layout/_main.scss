@@ -3,6 +3,12 @@
 
   &.front-page section {
     margin: 0 10%;
+    @include respond(phone) {
+      margin: 0;
+    }
+  }
+  @include respond(phone) {
+    padding-top: 8rem;
   }
 }
 
