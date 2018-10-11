@@ -29,6 +29,9 @@
     &__post-column {
         flex-basis: 75%;
         margin-right: 5.5rem;
+        #main {
+            padding-top: 0;
+        }
     }
     &__divider {
         width: 100%;

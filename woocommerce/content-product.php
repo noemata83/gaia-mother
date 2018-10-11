@@ -32,7 +32,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
     do_action( 'woocommerce_before_shop_loop_item' ); ?>
     
-    <div class="gaia_product__image'">
+    <div class="gaia_product__image">
 	<?php /**
 	 * Hook: woocommerce_before_shop_loop_item_title.
 	 *
@@ -42,7 +42,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     do_action( 'woocommerce_before_shop_loop_item_title' )
     ?>
     </div>
-    <div class="gaia-product__shop">
+    <div class="gaia_product__shop">
         <?php
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
@@ -56,6 +56,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_rating - 5
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
+	?>
+	<div class="gaia_product__shop-action">
+	<?php
     do_action( 'woocommerce_after_shop_loop_item_title' );
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
@@ -63,8 +66,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
+	?>
+	<?php
     do_action( 'woocommerce_after_shop_loop_item' );
-    ?>
+		?>
+			</div>
     </div>
     </div>
 </li>

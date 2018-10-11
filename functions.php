@@ -111,11 +111,29 @@ function gaia_mother_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'gaia-mother' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'gaia-mother' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Product Sidebar', 'gaia-mother' ),
+		'id'            => 'product',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+) );
+	
+register_sidebar( array(
+		'name'          => __( 'Shop Sidebar', 'gaia-mother' ),
+		'id'            => 'shop',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+) );
 }
 add_action( 'widgets_init', 'gaia_mother_widgets_init' );
 
@@ -167,5 +185,12 @@ add_action( 'init', 'woo_init' );
 function woo_init() {
 	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 }
