@@ -68,6 +68,9 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add theme support for woocommerce
+		add_theme_support('woocommerce');
+
 		/**
 		 * Add support for core custom logo.
 		 *

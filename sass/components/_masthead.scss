@@ -1,0 +1,16 @@
+.masthead {
+    height: 36rem;
+    position: relative;
+    z-index: 0;
+    &__copy {
+        position: absolute;
+        color: white;
+        font-size: 5rem;
+        font-weight: bold;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 40rem;
+        line-height: 1;
+    }
+}

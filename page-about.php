@@ -34,5 +34,16 @@ get_header();
             Gaia is committed to creating sustainable products. We value truth, sustainability, and hard work. Our team members share this passion and work each day to put people, pets, and property first.
         </p>
     </section>
+    <section class="story">
+        <div class="story__text">
+            <h2>How We Started</h2>
+            <p>Gaia USA has always been committed to creating sustainable products. In 1986, our founder received multiple patents for Safe Thaw, the foundation for our #1 selling product, Safe Paw.</p>
+            <p>First sold to power generation companies, construction firms, railroads, and municipal governments, our products helped them comply with EPA standards when no other product could.</p>
+            <p>From the beginning in 1986 to today, our company's commitment to innovative work remains. We will continue to create products that are 100% safe and put pets, people, and property first.</p>
+        </div>
+        <div class="story__image">
+            <img src="<?php echo get_theme_file_uri('assets/img/gaia_family.jpg')?>" alt="The Gaia Family" />
+        </div>
+    </section>
 
 <?php get_footer();?>

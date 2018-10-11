@@ -983,6 +983,21 @@ em {
   font-weight: bold;
   text-decoration: underline; }
 
+.masthead {
+  height: 36rem;
+  position: relative;
+  z-index: 0; }
+  .masthead__copy {
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 40rem;
+    line-height: 1; }
+
 .menu {
   stroke-width: 6px;
   stroke-linecap: square;
@@ -1683,6 +1698,19 @@ em {
       width: 70%;
       margin: 0 auto;
       text-align: center; }
+  #about .story {
+    display: flex;
+    width: 65%;
+    margin: 5rem auto; }
+    #about .story__text {
+      flex-basis: 50%; }
+    #about .story__image {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    #about .story p {
+      margin: 2rem 0; }
 
 .blog__header {
   height: 36rem;
