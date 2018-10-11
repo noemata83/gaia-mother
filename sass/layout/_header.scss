@@ -59,6 +59,9 @@
         flex-grow: 1;
         display: flex;
         align-items: flex-end;
+        @include respond(tab-port) {
+            align-items: center;
+        }
         button {
             position: absolute;
             top: 8rem;

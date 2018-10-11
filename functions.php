@@ -68,6 +68,9 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add theme support for woocommerce
+		add_theme_support('woocommerce');
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -160,3 +163,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action( 'init', 'woo_init' );
+function woo_init() {
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}

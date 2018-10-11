@@ -3,6 +3,9 @@
 
   &.front-page section {
     margin: 0 10%;
+    @include respond(tab-port) {
+      margin: 0 5%;
+    }
     @include respond(phone) {
       margin: 0;
     }

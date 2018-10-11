@@ -11,16 +11,18 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+		<main id="main" class="site-main blog">
+			<div class="masthead">
+				<div class="masthead__copy">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+					?>
+				</div>
+			</div>
+			<div class="blog__content">
+				<div class="blog__post-column">
+		<?php if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
@@ -44,10 +46,17 @@ get_header();
 
 		endif;
 		?>
+		</div>
+			<div class="blog__sidebar">
+					<?php
+					get_sidebar();
+					?>
+			</div>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
