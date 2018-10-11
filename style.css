@@ -607,7 +607,7 @@ a:hover, a:active {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 56.25em) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -914,10 +914,12 @@ html {
       font-size: 75%; } }
 
 p {
-  font-size: 2rem;
   line-height: 1.5; }
 
 li {
+  font-size: 2rem; }
+
+body {
   font-size: 2rem; }
 
 body, button, input {
@@ -966,10 +968,12 @@ html {
       font-size: 75%; } }
 
 p {
-  font-size: 2rem;
   line-height: 1.5; }
 
 li {
+  font-size: 2rem; }
+
+body {
   font-size: 2rem; }
 
 body, button, input {
@@ -1097,6 +1101,9 @@ em {
     flex-grow: 1;
     display: flex;
     align-items: flex-end; }
+    @media only screen and (max-width: 56.25em) {
+      .header__menu {
+        align-items: center; } }
     .header__menu button {
       position: absolute;
       top: 8rem;
@@ -1160,38 +1167,118 @@ em {
   flex-wrap: wrap;
   color: #97989a;
   background-color: #edefef; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding: 6rem 4rem 1rem 4rem; } }
   .footer__logobox {
     flex-basis: 22%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__logobox {
+        margin-right: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__logobox {
+        flex-basis: 46%; } }
   .footer__corporate {
-    flex-basis: 25%; }
+    flex-basis: 30%; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__corporate {
+        flex-basis: 51%; } }
   .footer__spacer {
-    flex-basis: 15%; }
+    flex-basis: 10%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__spacer {
+        flex-basis: 5%; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__spacer {
+        display: none; } }
   .footer__menu {
     font-size: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__menu {
+        font-size: 1.8rem; } }
     .footer__menu-left {
       padding-top: 5rem;
       flex-basis: 20%; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__menu-left {
+          flex-basis: 18%;
+          padding-top: 1rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer__menu-left {
+          padding-top: 3rem;
+          flex-basis: 20%; } }
     .footer__menu-right {
       padding-top: 5rem;
       flex-basis: 15%; }
+      @media only screen and (max-width: 56.25em) {
+        .footer__menu-right {
+          padding-top: 1rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .footer__menu-right {
+          display: none; } }
     .footer__menu li {
       margin-bottom: 2rem; }
       .footer__menu li a:link, .footer__menu li a:visited {
         color: inherit;
         text-decoration: none; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__menu li {
+          margin-bottom: 1rem;
+          font-size: 1.8rem; } }
+    .footer__menu-mobile {
+      display: none; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__menu-mobile {
+          display: block; } }
   .footer__tagline {
     margin-top: 5rem;
     margin-bottom: 6rem;
     font-weight: bold; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__tagline {
+        margin-top: 1rem;
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__tagline {
+        margin-top: 1rem;
+        font-weight: normal;
+        margin-bottom: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__address {
+      display: none; } }
+  .footer__address-mobile {
+    display: none;
+    font-size: 1.8rem;
+    margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__address-mobile {
+        display: block;
+        flex-basis: 47%;
+        padding-top: 3rem; } }
   .footer__copyright {
+    font-size: 1.8rem;
     margin-top: 6rem;
     flex-basis: 60%; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        order: 6;
+        font-size: 1.8rem;
+        flex-basis: 100%;
+        text-align: center; } }
+    .footer__copyright a, .footer__copyright a:link, .footer__copyright a:visited {
+      text-decoration: none;
+      color: inherit; }
   .footer__social {
     flex-basis: 40%;
     font-size: 4rem;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__social {
+        flex-basis: 100%;
+        margin-top: 4rem;
+        justify-content: center; } }
   .footer__socialIcon {
     height: 6.5rem;
     width: 6.5rem;
@@ -1203,11 +1290,19 @@ em {
     border-radius: 100%; }
     .footer__socialIcon:not(:last-child) {
       margin-right: 2rem; }
+  .footer__mobile-break {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__mobile-break {
+        display: initial; } }
 
 #main {
   padding-top: 10.5rem; }
   #main.front-page section {
     margin: 0 10%; }
+    @media only screen and (max-width: 56.25em) {
+      #main.front-page section {
+        margin: 0 5%; } }
     @media only screen and (max-width: 37.5em) {
       #main.front-page section {
         margin: 0; } }
@@ -1399,7 +1494,8 @@ em {
     flex-basis: 100%; }
     @media only screen and (max-width: 37.5em) {
       .about__guarantee {
-        margin-top: 10rem; } }
+        margin-top: 10rem;
+        padding: 0 4rem; } }
     .about__guarantee-headline {
       padding: 0 4rem;
       font-size: 4.6rem;
@@ -1419,9 +1515,6 @@ em {
       .about__validators {
         flex-wrap: wrap;
         justify-content: space-between; } }
-    @media only screen and (max-width: 37.5em) {
-      .about__validators {
-        padding: 0 4rem; } }
   .about__validator {
     flex-basis: 25%;
     flex-shrink: 1; }
@@ -1459,9 +1552,17 @@ em {
   @media only screen and (min-width: 112.5em) {
     .graphic {
       padding-bottom: 80rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .graphic {
+      padding-bottom: 34rem; } }
 
 .safety {
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .safety {
+      flex-direction: column-reverse;
+      padding: 0 4rem;
+      text-align: center; } }
   .safety__header {
     font-size: 4.6rem; }
   .safety__copy p {
@@ -1476,17 +1577,30 @@ em {
   text-align: center;
   font-weight: bold;
   margin-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .retailers__header {
+      padding: 0 8rem;
+      text-align: center;
+      margin-top: 4rem; } }
 
 .retailers__list {
   padding: 6rem 10%;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .retailers__list {
+      padding: 4rem;
+      flex-wrap: wrap; } }
 
 .retailers__logobox {
   flex-basis: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .retailers__logobox {
+      flex-basis: 40%;
+      margin: 5%; } }
 
 .retailers__logo {
   width: 100%; }
