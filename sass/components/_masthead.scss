@@ -2,6 +2,8 @@
     height: 36rem;
     position: relative;
     z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     &__copy {
         position: absolute;
         color: white;

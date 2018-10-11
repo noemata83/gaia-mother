@@ -23,23 +23,22 @@ get_header( 'shop' );
  * @hooked woocommerce_breadcrumb - 20
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
+
+do_action( 'woocommerce_before_main_content' );
 ?>
-<div class="masthead">
+<div class="masthead" style="background-image: url('<?php echo get_theme_file_uri('assets/img/shop_header.jpg')?>');">
 				<div class="masthead__copy">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-					?>
+                    <p>
+						<?php echo get_field('header_copy',  get_option('page_for_posts'));?>
+					</p>
 				</div>
 			</div>
 			<div class="blog__content">
 				<div class="blog__post-column">
-<?php do_action( 'woocommerce_before_main_content' );
-?>
-<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
+                    <header class="woocommerce-products-header">
+	                    <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		                    <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	                    <?php endif; ?>
 
 	<?php
 	/**
@@ -90,6 +89,15 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
+
+?>
+</div>
+<div class="blog__sidebar">
+    <?php
+        do_action( 'woocommerce_sidebar' );
+        ?>
+</div>
+<?php
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -102,11 +110,6 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 ?>
-</div>
-<div class="blog__sidebar">
-    <?php
-        do_action( 'woocommerce_sidebar' );
-        ?>
 </div>
 <?php
 get_footer( 'shop' );
