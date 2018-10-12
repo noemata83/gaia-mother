@@ -1070,17 +1070,29 @@ strong {
   padding-bottom: 3rem;
   border-bottom: 1px solid #d8dee1; }
 
-.gaia_product {
+.woocommerce .gaia_product, .gaia_product {
   display: flex;
   border-bottom: 1px solid lightgray;
   padding: 2rem; }
-  .gaia_product__image {
+  .woocommerce .gaia_product__header, .gaia_product__header {
+    display: flex; }
+    .woocommerce .gaia_product__header .woocommerce-products-header__title, .gaia_product__header .woocommerce-products-header__title {
+      font-size: 3rem;
+      text-align: left;
+      flex-basis: 70%; }
+    .woocommerce .gaia_product__header-meta, .gaia_product__header-meta {
+      flex-basis: 30%; }
+  .woocommerce .gaia_product__image, .gaia_product__image {
     position: relative;
     padding: 1rem; }
-  .gaia_product__shop {
+  .woocommerce .gaia_product__shop, .gaia_product__shop {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+  .woocommerce .gaia_product__description, .gaia_product__description {
+    flex-basis: 65%; }
+  .woocommerce .gaia_product__related, .gaia_product__related {
+    flex-basis: 30%; }
 
 .header {
   position: fixed;
@@ -1827,3 +1839,12 @@ strong {
 
 .woocommerce #content div.product div.images, .woocommerce .woocommerce div.product div.images, .woocommerce .woocommerce-page #content div.product div.images, .woocommerce .woocommerce-page div.product div.images {
   width: 100%; }
+
+.woocommerce .blog__content {
+  flex-wrap: wrap; }
+
+.woocommerce .blog__post-column {
+  flex-basis: 65%; }
+
+.woocommerce .blog__sidebar {
+  flex-basis: 30%; }

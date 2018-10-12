@@ -13,5 +13,6 @@ if ( ! is_active_sidebar( 'shop' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
+	<hr class="blog__divider" />
 	<?php dynamic_sidebar( 'shop' ); ?>
 </aside><!-- #secondary -->
