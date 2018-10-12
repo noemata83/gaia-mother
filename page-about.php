@@ -13,6 +13,11 @@ get_header();
             </p>
         </div>
     </div>
+    <section class="mobile-copy">
+        <p>
+            Few things are more important than our planet. The name Gaia (pronounced GUY-YA) comes from the gnostic term for Mother Earth, symbolic of our unyielding approach to developing safe and effective products for people, pets, and property.
+        </p>
+    </section>
     <section class="sustainability">
         <h2>A proven track record in sustainability</h2>
         <p>
@@ -27,6 +32,7 @@ get_header();
                 Our mission is simple: replace harmful products with safe options. We hope to one day be the most trusted manufacturer of environmentally safe products around the world.
             </p>    
         </div>
+        <img class="mission__mobile-graphic" src="<?php echo get_theme_file_uri('/assets/img/child_and_dog.jpg')?>" />
     </section>
     <section class="values">
         <h2>Company Values</h2>
