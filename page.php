@@ -14,10 +14,14 @@
 
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+		<div class="blog__header">
+					<p class="blog__header-copy">
+						<?php echo get_field('header_copy',  get_option('page_for_posts'));?>
+					</p>
+				</div>
+			<div class="blog__content">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -31,7 +35,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+			</div> <!-- blog__content-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

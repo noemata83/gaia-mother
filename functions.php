@@ -71,6 +71,9 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 		// Add theme support for woocommerce
 		add_theme_support('woocommerce');
 
+		// Add support for image gallery
+		add_theme_support( 'wc-product-gallery-lightbox' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -188,12 +191,39 @@ function woo_init() {
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_images', 40);
+	add_action( 'woocommerce_single_product_summary', 'divider', 15);
+	add_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
+	add_action( 'woocommerce_single_variation', 'woocommerce_template_single_add_to_cart', 20 );
 }
+
+function divider() {
+	echo '<hr class="blog__divider" />';
+}
+
+
+add_filter( 'woocommerce_product_description_heading', 'remove_product_description_heading' );
+function remove_product_description_heading() {
+ return '';
+}
+
+add_filter( 'woocommerce_product_additional_information_heading', 'remove_additional_information_heading' );
+function remove_additional_information_heading() {
+ return '';
+}
+
+// Hook in
+add_filter( 'woocommerce_get_availability', 'custom_override_get_availability', 1, 2);
+ 
+// The hook in function $availability is passed via the filter!
+function custom_override_get_availability( $availability, $_product ) {
+if ( $_product->is_in_stock() ) $availability['availability'] = __('<li><strong>In Stock</strong></li>', 'woocommerce');
+return $availability;
+}
+
 
 add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
 

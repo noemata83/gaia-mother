@@ -2,8 +2,13 @@
     display: flex;
     border-bottom: 1px solid lightgray;
     padding: 2rem;
+    @include respond(phone) {
+        display: block;
+    }
     &__header {
         display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
         .woocommerce-products-header__title {
             font-size: 3rem ;
             text-align: left;
@@ -11,6 +16,10 @@
         }
         &-meta {
             flex-basis: 30%;
+            opacity: .7;
+        }
+        @include respond(phone) {
+            display: block;
         }
     }
     &__image {
@@ -22,10 +31,19 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        flex-basis: 60%;
     }
 
     &__description {
-        flex-basis: 65%;
+        flex-basis: 62%;
+        margin-right: 5.5rem;
+        p {
+            margin-bottom: 2rem;
+        }
+        @include respond(tab-port) {
+            margin: 0;
+            padding-top: 2rem;
+        }
     }
 
     &__related {
