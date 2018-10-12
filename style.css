@@ -1173,8 +1173,8 @@ strong {
       background-color: transparent;
       z-index: 99999; }
     .header__menu svg {
-      height: 5rem;
-      width: 5rem; }
+      height: 7rem;
+      width: 7rem; }
     @media only screen and (max-width: 56.25em) {
       .header__menu ul {
         display: none; } }
@@ -1190,22 +1190,29 @@ strong {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); } }
 
 .menu__bar {
-  transition: transform .3s ease-in; }
+  transition: transform .3s ease-in;
+  fill: white; }
+
+.menu__text {
+  fill: white; }
+
+#menu-bar-top {
+  transform-origin: -33px 50px; }
 
 #menu-bar-middle {
   transform-origin: center; }
 
 #menu-bar-bottom {
-  transform-origin: left; }
+  transform-origin: 16px 125px; }
 
 #menu-toggle.open #menu-bar-top {
-  transform: rotate(33deg); }
+  transform: rotate(45deg); }
 
 #menu-toggle.open #menu-bar-middle {
   transform: scaleX(0); }
 
 #menu-toggle.open #menu-bar-bottom {
-  transform: rotate(-33deg); }
+  transform: rotate(-45deg); }
 
 .menu {
   flex-grow: 1;

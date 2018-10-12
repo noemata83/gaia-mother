@@ -72,8 +72,8 @@
             z-index: 99999;
         }
         svg {
-            height: 5rem;
-            width: 5rem;
+            height: 7rem;
+            width: 7rem;
         }
         ul {
             @include respond(tab-port) {
@@ -96,6 +96,15 @@
 
 .menu__bar {
     transition: transform .3s ease-in;
+    fill: white;
+}
+
+.menu__text {
+    fill: white;
+}
+
+#menu-bar-top {
+    transform-origin: -33px 50px;
 }
 
 #menu-bar-middle {
@@ -103,19 +112,19 @@
 }
 
 #menu-bar-bottom {
-    transform-origin: left;
+    transform-origin: 16px 125px;
 }
 
 #menu-toggle.open {
     #menu-bar-top {
-        transform: rotate(33deg);
+        transform: rotate(45deg);
     }
     #menu-bar-middle {
         transform: scaleX(0);
     }
 
     #menu-bar-bottom {
-        transform: rotate(-33deg);
+        transform: rotate(-45deg);
     }
 }
 
