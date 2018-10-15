@@ -252,3 +252,19 @@ function output_menu_bar() {
 	</g>
 </svg>';
 }
+
+function output_shopping_cart_icon() {
+	echo '
+	<svg id="header-shopping-cart" data-name="Layer 1" viewBox="0 0 72 62">
+		<g class="shopping-cart-icon">
+			<path d="M310,420a7,7,0,1,0,7-7A7,7,0,0,0,310,420Zm4,0a3,3,0,1,1,3,3A3,3,0,0,1,314,420Z" transform="translate(-271 -365)"/>
+			<path d="M278,420a7,7,0,1,0,7-7A7,7,0,0,0,278,420Zm4,0a3,3,0,1,1,3,3A3,3,0,0,1,282,420Z" transform="translate(-271 -365)"/>
+			<path d="M285,417h32a2,2,0,0,0,1.9-1.37L334.44,369H341a2,2,0,0,0,0-4h-8a2,2,0,0,0-1.9,1.37L315.56,413H285a2,2,0,0,0,0,4Z" transform="translate(-271 -365)"/>
+			<path d="M281,405h40a2,2,0,0,0,0-4H282.44l-6.67-20H329a2,2,0,0,0,0-4H273a2,2,0,0,0-1.9,2.63l8,24A2,2,0,0,0,281,405Z" transform="translate(-271 -365)"/>
+			<path d="M277,393h48a2,2,0,0,0,0-4H277a2,2,0,0,0,0,4Z" transform="translate(-271 -365)"/>
+			<path d="M308.5,405a2,2,0,0,0,2-1.75l3-24a2,2,0,1,0-4-.5l-3,24a2,2,0,0,0,1.73,2.23A1.1,1.1,0,0,0,308.5,405Z" transform="translate(-271 -365)"/>
+			<path d="M293.5,405a1.1,1.1,0,0,0,.25,0,2,2,0,0,0,1.73-2.23l-3-24a2,2,0,0,0-4,.5l3,24A2,2,0,0,0,293.5,405Z" transform="translate(-271 -365)"/>
+		</g>
+	</svg>
+	';
+}
