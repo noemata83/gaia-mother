@@ -236,3 +236,19 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product 
 	}
 	return $html;
 }
+
+function output_menu_bar() {
+	echo  '<svg viewBox="0 0 152.06 205.93">
+	<g class="menu__hamburger">
+			<rect class="menu__bar" id="menu-bar-top" width="152.06" height="15.64" />
+			<rect class="menu__bar" id="menu-bar-middle" width="152.06" height="15.64" y="68.16" />
+			<rect  class="menu__bar" id="menu-bar-bottom" width="152.06" height="15.64" y="136.31" />
+	</g>
+	<g class="menu__text">
+			<path d="M633.33,407.8V394.93l-4.44,9.38h-2.16l-4.54-9.38V407.8h-2.92V388.55h2.92l5.62,12,5.52-12h2.92V407.8Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M649.38,407.8V388.55h12.3v2.62H652.3v5.63h8v2.59h-8v5.79h9.38v2.62Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M685.62,407.8l-8.89-13.54V407.8h-2.92V388.55h2.67l8.9,13.52V388.55h2.92V407.8Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M708.05,408a6.53,6.53,0,0,1-6.89-6.66V388.55h2.92v12.63a4,4,0,1,0,8,0V388.55H715v12.76C715,405.29,712,408,708.05,408Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+	</g>
+</svg>';
+}
