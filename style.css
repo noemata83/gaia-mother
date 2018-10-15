@@ -1771,7 +1771,7 @@ strong {
       top: 15%; }
       @media only screen and (max-width: 37.5em) {
         #about .hero__text {
-          top: 3%;
+          top: 6%;
           left: 3%;
           text-align: center; } }
     @media only screen and (max-width: 37.5em) {

@@ -10,7 +10,7 @@
         &__text {
             top: 15%;
             @include respond(phone) {
-                top: 3%;
+                top: 6%;
                 left: 3%;
                 text-align: center;
             }
