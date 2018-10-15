@@ -1001,6 +1001,8 @@ strong {
     transform: translateY(-50%);
     width: 40rem;
     line-height: 1; }
+    .masthead__copy p {
+      line-height: 1; }
 
 .menu {
   stroke-width: 6px;
@@ -1068,7 +1070,7 @@ strong {
 
 .woocommerce .gaia_product, .gaia_product {
   display: flex;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #d8dee1;
   padding: 2rem; }
   @media only screen and (max-width: 37.5em) {
     .woocommerce .gaia_product, .gaia_product {
@@ -1106,6 +1108,21 @@ strong {
         padding-top: 2rem; } }
   .woocommerce .gaia_product__related, .gaia_product__related {
     flex-basis: 30%; }
+
+.rp__title {
+  font-size: 3rem;
+  font-weight: bold; }
+
+.rp__image {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #d8dee1; }
+
+.rp__link {
+  padding: 4rem 0;
+  border-bottom: 1px solid #d8dee1; }
+  .rp__link a, .rp__link a:link {
+    color: black;
+    font-size: 2.4rem; }
 
 .header {
   position: fixed;

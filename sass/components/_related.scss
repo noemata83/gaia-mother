@@ -1,0 +1,18 @@
+.rp {
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    &__image {
+        padding: 4rem 2rem;
+        border-bottom: 1px solid #d8dee1;
+    }
+    &__link {
+        padding: 4rem 0;
+        border-bottom: 1px solid #d8dee1;
+        a, a:link {
+            color: black;
+            font-size: 2.4rem;
+        }
+    }
+}
