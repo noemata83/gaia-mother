@@ -1,6 +1,9 @@
 #about {
     padding-top: 11rem;
 
+    @include respond(tab-port) {
+        padding-top: 15rem;
+    }
     @include respond(phone) {
         padding-top: 8rem;
     }
@@ -8,7 +11,7 @@
         background-image: url('assets/img/about_hero.jpg');
         background-position-y: 50%;
         &__text {
-            top: 15%;
+            top: 10%;
             @include respond(phone) {
                 top: 6%;
                 left: 3%;
