@@ -24,11 +24,21 @@
         background-color: white;
         display: flex;
         padding: 4.5rem 4rem;
+        @include respond(tab-port) {
+            margin: 0 5%;
+            margin-top: -6.5rem;
+        }
     }
 
     &__post-column {
         flex-basis: 75%;
         margin-right: 5.5rem;
+        #main {
+            padding-top: 0;
+        }
+        @include respond(phone) {
+            margin: 0;
+        }
     }
     &__divider {
         width: 100%;

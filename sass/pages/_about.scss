@@ -1,31 +1,68 @@
 #about {
-    padding-top: 12rem;
+    padding-top: 11rem;
+
+    @include respond(phone) {
+        padding-top: 8rem;
+    }
     .hero {
         background-image: url('assets/img/about_hero.jpg');
         background-position-y: 50%;
         &__text {
             top: 15%;
+            @include respond(phone) {
+                top: 3%;
+                left: 3%;
+                text-align: center;
+            }
+        }
+        &__lead {
+            @include respond(phone) {
+                font-size: 5.2rem;
+                width: 27rem;
+            }
+            @include respond(small-phone) {
+                font-size: 4.4rem;
+            }
         }
         &__copy {
             font-size: 2.4rem;
         }
+
+        @include respond(phone) {
+            background-image: url('assets/img/about_hero_mobile.jpg');
+            padding-bottom: 0;
+            height: 90vh;
+        }
     }
-    
+
+
     h2 {
         text-align: center;
         font-weight: bold;
         font-size: 6rem;
         margin-bottom: 2rem;
+        @include respond(phone) {
+            font-size: 4.6rem;
+        }
     }
     .sustainability {
         text-align: center;
         width: 80%;
         margin: 0 auto;
         padding-top: 12rem;
+        h2 {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
         p {
             font-size: 2rem;
             width: 80%;
             margin: 0 auto;
+        }
+        @include respond(phone) {
+            padding-top: 3rem;
+            width: 100%;
         }
     }
 
@@ -33,6 +70,9 @@
         background-image: url('assets/img/about_landscape.jpg');
         width: 100%;
         padding-bottom: 60%;
+        @include respond(phone) {
+            padding-bottom: 70%;
+        }
     }
 
     .mission {
@@ -51,6 +91,24 @@
             p {
                 font-size: 2rem;
             }
+            @include respond(phone) {
+                position: initial;
+                width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        &__mobile-graphic {
+            display: none;
+            @include respond(phone) {
+                display: block;
+            }
+        }
+
+        @include respond(phone) {
+            background-image: none;
+            padding-bottom: 0;
         }
     }
     .values {
@@ -60,6 +118,32 @@
             width: 70%;
             margin: 0 auto;
             text-align: center;
+            @include respond(phone) {
+                width: 80%;
+            }
+        }
+    }
+    .story {
+        display: flex;
+        width: 65%;
+        margin: 5rem auto;
+        &__text {
+            flex-basis: 50%;
+        }
+        &__image {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        p {
+            margin: 2rem auto;
+            width: 80%;
+        }
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+            display: block;
         }
     }
 }

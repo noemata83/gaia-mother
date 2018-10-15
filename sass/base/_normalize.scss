@@ -424,11 +424,6 @@ abbr, acronym {
 	cursor: help;
 }
 
-mark, ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
 big {
 	font-size: 125%;
 }
@@ -673,7 +668,7 @@ a:hover, a:active {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 56.25em) {
 	.menu-toggle {
 		display: none;
 	}

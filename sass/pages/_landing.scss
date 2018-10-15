@@ -234,6 +234,7 @@
         flex-basis: 100%;
         @include respond(phone) {
             margin-top: 10rem;
+            padding: 0 4rem;
         }
         &-headline {
             padding: 0 4rem;
@@ -258,9 +259,6 @@
         @include respond(tab-port) {
             flex-wrap: wrap;
             justify-content: space-between;
-        }
-        @include respond(phone) {
-            padding: 0 4rem;
         }
     }
     &__validator {
@@ -306,10 +304,18 @@
     @include respond(big-desktop) {
         padding-bottom: 80rem;
     }
+    @include respond(phone) {
+        padding-bottom: 34rem;
+    }
 }
 
 .safety {
     display: flex;
+    @include respond(phone) {
+        flex-direction: column-reverse;
+        padding: 0 4rem;
+        text-align: center;
+    }
     &__header {
         font-size: 4.6rem;
     }
@@ -332,18 +338,31 @@
         text-align: center;
         font-weight: bold;
         margin-bottom: 2rem;
+        @include respond(phone) {
+            padding: 0 8rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
     }
 
     &__list {
         padding: 6rem 10%;
         display: flex;
         justify-content: space-between;
+        @include respond(phone) {
+            padding: 4rem;
+            flex-wrap: wrap;
+        }
     }
     &__logobox {
         flex-basis: 15%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include respond(phone) {
+            flex-basis: 40%;
+            margin: 5%;
+        }
     }
     &__logo {
         width: 100%;

@@ -17,10 +17,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+  <?php wp_head();
+  do_action( 'woocommerce_before_main_content' );
+  ?>
 </head>
 
-<body <?php body_class();?>>
+<body <?php body_class('woocommerce');?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gaia-mother' ); ?></a>
 
@@ -45,3 +47,12 @@
 
 
 	<div id="content" class="site-content">
+  <div class="masthead" style="background-image: url('<?php echo get_theme_file_uri('assets/img/shop_header.jpg')?>');">
+				<div class="masthead__copy">
+                    <p>
+						<?php echo get_field('header_copy',  get_option('page_for_posts'));?>
+					</p>
+				</div>
+			</div>
+			<div class="blog__content">
+				<div class="blog__post-column">

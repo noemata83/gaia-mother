@@ -68,6 +68,12 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Add theme support for woocommerce
+		add_theme_support('woocommerce');
+
+		// Add support for image gallery
+		add_theme_support( 'wc-product-gallery-lightbox' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -108,11 +114,29 @@ function gaia_mother_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'gaia-mother' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'gaia-mother' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Product Sidebar', 'gaia-mother' ),
+		'id'            => 'product',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+) );
+	
+register_sidebar( array(
+		'name'          => __( 'Shop Sidebar', 'gaia-mother' ),
+		'id'            => 'shop',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+) );
 }
 add_action( 'widgets_init', 'gaia_mother_widgets_init' );
 
@@ -160,3 +184,71 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action( 'init', 'woo_init' );
+function woo_init() {
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+	add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_images', 40);
+	add_action( 'woocommerce_single_product_summary', 'divider', 15);
+	add_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
+	add_action( 'woocommerce_single_variation', 'woocommerce_template_single_add_to_cart', 20 );
+}
+
+function divider() {
+	echo '<hr class="blog__divider" />';
+}
+
+
+add_filter( 'woocommerce_product_description_heading', 'remove_product_description_heading' );
+function remove_product_description_heading() {
+ return '';
+}
+
+add_filter( 'woocommerce_product_additional_information_heading', 'remove_additional_information_heading' );
+function remove_additional_information_heading() {
+ return '';
+}
+
+// Hook in
+add_filter( 'woocommerce_get_availability', 'custom_override_get_availability', 1, 2);
+ 
+// The hook in function $availability is passed via the filter!
+function custom_override_get_availability( $availability, $_product ) {
+if ( $_product->is_in_stock() ) $availability['availability'] = __('<li><strong>In Stock</strong></li>', 'woocommerce');
+return $availability;
+}
+
+
+add_filter( 'woocommerce_loop_add_to_cart_link', 'quantity_inputs_for_woocommerce_loop_add_to_cart_link', 10, 2 );
+
+function quantity_inputs_for_woocommerce_loop_add_to_cart_link( $html, $product ) {
+	if ( $product && $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock() && ! $product->is_sold_individually() ) {
+		$html = '<form action="' . esc_url( $product->add_to_cart_url() ) . '" class="cart" method="post" enctype="multipart/form-data">';
+		$html .= woocommerce_quantity_input( array(), $product, false );
+		$html .= '<button type="submit" class="button alt">' . esc_html( $product->add_to_cart_text() ) . '</button>';
+		$html .= '</form>';
+	}
+	return $html;
+}
+
+function output_menu_bar() {
+	echo  '<svg viewBox="0 0 152.06 205.93">
+	<g class="menu__hamburger">
+			<rect class="menu__bar" id="menu-bar-top" width="152.06" height="15.64" />
+			<rect class="menu__bar" id="menu-bar-middle" width="152.06" height="15.64" y="68.16" />
+			<rect  class="menu__bar" id="menu-bar-bottom" width="152.06" height="15.64" y="136.31" />
+	</g>
+	<g class="menu__text">
+			<path d="M633.33,407.8V394.93l-4.44,9.38h-2.16l-4.54-9.38V407.8h-2.92V388.55h2.92l5.62,12,5.52-12h2.92V407.8Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M649.38,407.8V388.55h12.3v2.62H652.3v5.63h8v2.59h-8v5.79h9.38v2.62Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M685.62,407.8l-8.89-13.54V407.8h-2.92V388.55h2.67l8.9,13.52V388.55h2.92V407.8Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+			<path d="M708.05,408a6.53,6.53,0,0,1-6.89-6.66V388.55h2.92v12.63a4,4,0,1,0,8,0V388.55H715v12.76C715,405.29,712,408,708.05,408Z" class="cls-1" transform="translate(-591.19 -202.04)"/>
+	</g>
+</svg>';
+}
