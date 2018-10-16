@@ -954,6 +954,9 @@ sub {
        half as far down as the superscript moved up */
   bottom: -0.25em; }
 
+input {
+  font-size: 2rem; }
+
 html {
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
@@ -2148,6 +2151,13 @@ strong {
   .woocommerce .quantity input {
     font-size: 2rem; }
 
+.woocommerce-account.woocommerce-MyAccount-navigation {
+  background-color: #d8dee1;
+  padding: 4rem 2rem; }
+
+.woocommerce-MyAccount-navigation-link {
+  margin-bottom: 2rem; }
+
 .woocommerce-checkout .header__menu, .woocommerce-cart .header__menu {
   display: none; }
 
@@ -2198,6 +2208,9 @@ strong {
 
 .type-page.page img {
   width: 100%; }
+
+.type-page.page .payment_method_ppec_paypal img {
+  width: initial; }
 
 .type-page.page section {
   border-bottom: 1px solid #d8dee1;
@@ -2253,6 +2266,9 @@ strong {
   .type-page.page .locator__disclaimer {
     padding-top: 1rem;
     border-top: 1px solid #d8dee1; }
+
+.type-page.page a .locator h2 {
+  text-decoration: none; }
 
 .type-page.page .entry-content {
   margin: 0; }

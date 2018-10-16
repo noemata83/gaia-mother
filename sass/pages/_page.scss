@@ -51,6 +51,12 @@
   img {
     width: 100%;
   }
+
+  .payment_method_ppec_paypal {
+    img {
+      width: initial;
+    }
+  }
     
     
   section {
@@ -115,6 +121,12 @@
     &__disclaimer {
       padding-top: 1rem;
       border-top: 1px solid #d8dee1;
+    }
+  }
+
+  a .locator {
+    h2 {
+      text-decoration: none;
     }
   }
 
