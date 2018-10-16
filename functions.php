@@ -280,8 +280,13 @@ function output_shopping_cart_icon() {
 	';
 }
 
-remove_filter('the_content', 'wpautop');
-
+function remove_p_on_pages() {
+	if ( is_page() ) {
+			remove_filter( 'the_content', 'wpautop' );
+			remove_filter( 'the_excerpt', 'wpautop' );
+	}
+}
+add_action( 'wp_head', 'remove_p_on_pages' );
 
 add_action('widgets_init', create_function('', 'return register_widget("gaia_related_products");'));
 

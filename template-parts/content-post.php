@@ -8,7 +8,7 @@
         </div>
         <hr class="blog__divider">
         <div class="post__author">
-            <i class="fas fa-user"></i> By <a href="<?php the_author_posts_link(); ?>"><?php the_author(); ?></a>
+            <i class="fas fa-user"></i> By <?php the_author_posts_link(); ?>
         </div>
         <div class="post__comments">
             <i class="fas fa-comments"></i> <?php comments_number();?>
