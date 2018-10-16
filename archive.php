@@ -7,21 +7,8 @@
  * @package gaia-mother
  */
 
-get_header();
+get_header( 'blog' );
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main blog">
-			<div class="masthead">
-				<div class="masthead__copy">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-					?>
-				</div>
-			</div>
-			<div class="blog__content">
-				<div class="blog__post-column">
 		<?php if ( have_posts() ) : ?>
 
 			<?php

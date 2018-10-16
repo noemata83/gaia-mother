@@ -4,11 +4,11 @@
             <?php the_category();?>
         </div>
         <div class="post__title">
-            <?php the_title();?>
+            <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </div>
         <hr class="blog__divider">
         <div class="post__author">
-            <i class="fas fa-user"></i> By <?php the_author(); ?>
+            <i class="fas fa-user"></i> By <a href="<?php the_author_posts_link(); ?>"><?php the_author(); ?></a>
         </div>
         <div class="post__comments">
             <i class="fas fa-comments"></i> <?php comments_number();?>
