@@ -2111,35 +2111,59 @@ strong {
 .woocommerce-checkout input, .woocommerce-checkout textarea, .woocommerce-cart input, .woocommerce-cart textarea {
   font-size: 2rem; }
 
-.page__header, .page p.page__header {
+.type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
   margin-bottom: 2rem;
   margin-top: 0; }
 
-.page h2 {
+.type-page.page .page__row {
+  display: flex;
+  width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .type-page.page .page__row {
+      display: block; } }
+
+.type-page.page .page__column {
+  flex-basis: 45%;
+  flex-grow: 1; }
+  .type-page.page .page__column:not(:last-child) {
+    margin-right: 2%; }
+
+.type-page.page h2 {
   font-size: 4rem;
   font-weight: bold;
   padding: 2rem 0; }
 
-.page p {
+.type-page.page h3 {
+  font-size: 3rem;
+  font-weight: bold; }
+
+.type-page.page p {
   margin: 1rem 0; }
 
-.page section {
-  padding: 2rem 0;
-  border-bottom: 1px solid #d8dee1; }
-
-.page__row {
-  display: flex;
+.type-page.page img {
   width: 100%; }
-  @media only screen and (max-width: 56.25em) {
-    .page__row {
-      display: block; } }
 
-.page__column {
-  flex-basis: 45%;
-  flex-grow: 1; }
-  .page__column:not(:last-child) {
-    margin-right: 2%; }
+.type-page.page section {
+  border-bottom: 1px solid #d8dee1;
+  padding: 2rem 0; }
 
-.page .entry-content {
+.type-page.page .stormtracker {
+  color: white;
+  background-image: url("./assets/img/storm_tracker_background.jpg");
+  width: 100%;
+  padding: 4rem;
+  padding-bottom: 43%;
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .type-page.page .stormtracker h3 {
+    font-size: 6rem;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 2rem; }
+  .type-page.page .stormtracker p {
+    width: 36%;
+    font-size: 2rem; }
+
+.type-page.page .entry-content {
   margin: 0; }

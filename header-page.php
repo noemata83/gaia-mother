@@ -18,11 +18,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
   <?php wp_head();
-  do_action( 'woocommerce_before_main_content' );
   ?>
 </head>
 
-<body <?php body_class('woocommerce');?>>
+<body <?php body_class();?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gaia-mother' ); ?></a>
 
