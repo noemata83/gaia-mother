@@ -1057,6 +1057,29 @@ strong {
 .post__content {
   padding: 2rem 0 4.5rem 0; }
 
+.single-post .post__category {
+  font-size: 4rem; }
+
+.single-post .post__content p {
+  text-align: justify;
+  margin-bottom: 1.6rem; }
+
+.single-post .post__content ul {
+  list-style: disc;
+  padding-left: 3rem;
+  display: block;
+  margin-block-start: 1.6rem;
+  margin-block-end: 1.6rem;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 4rem; }
+
+.single-post .post__content li {
+  text-transform: uppercase;
+  padding-bottom: 1.3rem;
+  list-style-image: url("assets/img/check.png");
+  font-weight: bold; }
+
 .wpp-title {
   font-size: 3rem;
   text-align: center;

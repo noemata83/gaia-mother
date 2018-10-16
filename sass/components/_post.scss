@@ -43,3 +43,33 @@
         padding: 2rem 0 4.5rem 0;
     }
 }
+
+.single-post {
+    .post {
+        &__category {
+            font-size: 4rem;
+        }
+        &__content {
+            p {
+                text-align: justify;
+                margin-bottom: 1.6rem;
+            }
+            ul {
+                list-style: disc;
+                padding-left: 3rem;
+                display: block;
+                margin-block-start: 1.6rem;
+                margin-block-end: 1.6rem;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                padding-inline-start: 4rem;
+            }
+            li {
+                text-transform: uppercase;
+                padding-bottom: 1.3rem;
+                list-style-image: url('assets/img/check.png');
+                font-weight: bold;
+            }
+        }
+    }
+}
