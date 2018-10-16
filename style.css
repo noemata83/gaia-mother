@@ -1111,7 +1111,8 @@ strong {
 
 .rp__title {
   font-size: 3rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: 4rem; }
 
 .rp__image {
   padding: 4rem 2rem;
