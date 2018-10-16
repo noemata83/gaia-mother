@@ -19,9 +19,12 @@
             }
         }
         &__lead {
+            @include respond(tab-port) {
+                font-size: 4.8rem;
+                width: 28rem;
+            }
             @include respond(phone) {
                 font-size: 5.2rem;
-                width: 27rem;
             }
             @include respond(small-phone) {
                 font-size: 4.4rem;
@@ -29,6 +32,9 @@
         }
         &__copy {
             font-size: 2.4rem;
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         @include respond(phone) {
@@ -63,6 +69,9 @@
             width: 80%;
             margin: 0 auto;
         }
+        @include respond(tab-port) {
+            padding-top: 3rem;
+        }
         @include respond(phone) {
             padding-top: 3rem;
             width: 100%;
@@ -94,22 +103,30 @@
             p {
                 font-size: 2rem;
             }
-            @include respond(phone) {
+            h2 {
+                width: 70%;
+                margin: 2rem auto;
+            }
+            @include respond(tab-port) {
                 position: initial;
-                width: 80%;
+                width: 70%;
                 margin: 0 auto;
                 display: block;
+            }
+            @include respond(phone) {
+                width: 80%;
             }
         }
 
         &__mobile-graphic {
             display: none;
-            @include respond(phone) {
+            @include respond(tab-port) {
                 display: block;
+                margin: 0 auto;
             }
         }
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             background-image: none;
             padding-bottom: 0;
         }
@@ -138,15 +155,41 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include respond(tab-port) {
+                width: 70%;
+                margin: 0 auto;
+            }
+            @include respond(phone) {
+                width: 80%;
+            }
         }
         p {
             margin: 2rem auto;
-            width: 80%;
+            width: 70%;
+            @include respond(phone) {
+                width: 80%;
+            }
         }
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 100%;
             text-align: center;
             display: block;
+        }
+    }
+    .mobile-copy {
+        @include respond(tab-port) {
+            display: block;
+            padding: 4rem 0rem;
+        }
+        p {
+            @include respond(tab-port) {
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+            }
+            @include respond(phone) {
+                width: 80%;
+            }
         }
     }
 }

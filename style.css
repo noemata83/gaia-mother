@@ -1811,15 +1811,21 @@ strong {
           top: 6%;
           left: 3%;
           text-align: center; } }
+    @media only screen and (max-width: 56.25em) {
+      #about .hero__lead {
+        font-size: 4.8rem;
+        width: 28rem; } }
     @media only screen and (max-width: 37.5em) {
       #about .hero__lead {
-        font-size: 5.2rem;
-        width: 27rem; } }
+        font-size: 5.2rem; } }
     @media only screen and (max-width: 22.5em) {
       #about .hero__lead {
         font-size: 4.4rem; } }
     #about .hero__copy {
       font-size: 2.4rem; }
+      @media only screen and (max-width: 56.25em) {
+        #about .hero__copy {
+          display: none; } }
     @media only screen and (max-width: 37.5em) {
       #about .hero {
         background-image: url("assets/img/about_hero_mobile.jpg");
@@ -1846,6 +1852,9 @@ strong {
       font-size: 2rem;
       width: 80%;
       margin: 0 auto; }
+    @media only screen and (max-width: 56.25em) {
+      #about .sustainability {
+        padding-top: 3rem; } }
     @media only screen and (max-width: 37.5em) {
       #about .sustainability {
         padding-top: 3rem;
@@ -1872,18 +1881,25 @@ strong {
       right: 10%; }
       #about .mission__text p {
         font-size: 2rem; }
-      @media only screen and (max-width: 37.5em) {
+      #about .mission__text h2 {
+        width: 70%;
+        margin: 2rem auto; }
+      @media only screen and (max-width: 56.25em) {
         #about .mission__text {
           position: initial;
-          width: 80%;
+          width: 70%;
           margin: 0 auto;
           display: block; } }
+      @media only screen and (max-width: 37.5em) {
+        #about .mission__text {
+          width: 80%; } }
     #about .mission__mobile-graphic {
       display: none; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 56.25em) {
         #about .mission__mobile-graphic {
-          display: block; } }
-    @media only screen and (max-width: 37.5em) {
+          display: block;
+          margin: 0 auto; } }
+    @media only screen and (max-width: 56.25em) {
       #about .mission {
         background-image: none;
         padding-bottom: 0; } }
@@ -1908,14 +1924,36 @@ strong {
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      @media only screen and (max-width: 56.25em) {
+        #about .story__image {
+          width: 70%;
+          margin: 0 auto; } }
+      @media only screen and (max-width: 37.5em) {
+        #about .story__image {
+          width: 80%; } }
     #about .story p {
       margin: 2rem auto;
-      width: 80%; }
-    @media only screen and (max-width: 37.5em) {
+      width: 70%; }
+      @media only screen and (max-width: 37.5em) {
+        #about .story p {
+          width: 80%; } }
+    @media only screen and (max-width: 56.25em) {
       #about .story {
         width: 100%;
         text-align: center;
         display: block; } }
+  @media only screen and (max-width: 56.25em) {
+    #about .mobile-copy {
+      display: block;
+      padding: 4rem 0rem; } }
+  @media only screen and (max-width: 56.25em) {
+    #about .mobile-copy p {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center; } }
+  @media only screen and (max-width: 37.5em) {
+    #about .mobile-copy p {
+      width: 80%; } }
 
 .blog__header {
   height: 36rem;
