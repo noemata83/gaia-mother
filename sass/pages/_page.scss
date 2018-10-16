@@ -1,5 +1,43 @@
 .page {
-  &__header {
-    font-size: 2.8rem;
+  &__header, p.page__header {
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
   }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 2rem 0;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #d8dee1;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+  
+  &__column {
+    flex-basis: 45%;
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-right: 2%;
+    }
+  }
+
+  .entry-content {
+    margin: 0;
+  }
+
 }
