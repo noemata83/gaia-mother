@@ -2110,3 +2110,6 @@ strong {
 
 .woocommerce-checkout input, .woocommerce-checkout textarea, .woocommerce-cart input, .woocommerce-cart textarea {
   font-size: 2rem; }
+
+.page__header {
+  font-size: 2.8rem; }
