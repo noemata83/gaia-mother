@@ -305,9 +305,9 @@ function add_gcf_interface() {
 	
 		<p><strong>Shop Header Image:</strong><br />
 			<p>Ideal image dimensions: 1440 x 360px</p>
-			<img class="header_logo" src="<?php echo get_option('shop_header_image'); ?>" width="720" height="180"/><br/>
-			<input class="header_logo_url" type="text" name="shop_header_image" size="60" value="<?php echo get_option('shop_header_image'); ?>">
-			<a href="#" class="header_logo_upload">Upload</a>
+			<img class="header_logo" id="shop_header_img" src="<?php echo get_option('shop_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="shop_header_url" type="text" name="shop_header_image" size="60" value="<?php echo get_option('shop_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="shop_header_upload">Upload</a>
 	</p> 
 
 		<p><strong>Blog Header Text:</strong><br />
@@ -315,18 +315,18 @@ function add_gcf_interface() {
 	
 		<p><strong>Blog Header Image:</strong><br />
 			<p>Ideal image dimensions: 1440 x 360px</p>
-			<img class="header_logo" src="<?php echo get_option('blog_header_image'); ?>" width="720" height="180"/><br/>
-			<input class="header_logo_url" type="text" name="blog_header_image" size="60" value="<?php echo get_option('blog_header_image'); ?>">
-			<a href="#" class="header_logo_upload">Upload</a>
+			<img class="header_logo" id="blog_header_img" src="<?php echo get_option('blog_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="blog_header_url" type="text" name="blog_header_image" size="60" value="<?php echo get_option('blog_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="blog_header_upload">Upload</a>
 		</p> 
 
 		<p><strong>Page Header Text:</strong><br />
 		<input type="text" name="page_header_text" size="45" value="<?php echo get_option('page_header_text'); ?>" /></p>
 		<p><strong>Page Header Image:</strong><br />
 			<p>Ideal image dimensions: 1440 x 360px</p>
-			<img class="header_logo" src="<?php echo get_option('page_header_image'); ?>" width="720" height="180"/><br/>
-			<input class="header_logo_url" type="text" name="page_header_image" size="60" value="<?php echo get_option('page_header_image'); ?>">
-			<a href="#" class="header_logo_upload">Upload</a>
+			<img class="header_logo" id="page_header_img" src="<?php echo get_option('page_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="page_header_url" type="text" name="page_header_image" size="60" value="<?php echo get_option('page_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="page_header_upload">Upload</a>
 		</p>
 
 
@@ -339,7 +339,7 @@ function add_gcf_interface() {
 		</div>
 		<script>
     jQuery(document).ready(function($) {
-        $('.header_logo_upload').click(function(e) {
+        $('#shop_header_upload').click(function(e) {
             e.preventDefault();
 
             var custom_uploader = wp.media({
@@ -351,8 +351,44 @@ function add_gcf_interface() {
             })
             .on('select', function() {
                 var attachment = custom_uploader.state().get('selection').first().toJSON();
-                $('.header_logo').attr('src', attachment.url);
-                $('.header_logo_url').val(attachment.url);
+                $('#shop_header_img').attr('src', attachment.url);
+                $('#shop_header_url').val(attachment.url);
+
+            })
+            .open();
+        });
+        $('#blog_header_upload').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Custom Image',
+                button: {
+                    text: 'Upload Image'
+                },
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#blog_header_img').attr('src', attachment.url);
+                $('#blog_header_url').val(attachment.url);
+
+            })
+            .open();
+        });
+        $('#page_header_upload').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Custom Image',
+                button: {
+                    text: 'Upload Image'
+                },
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#page_header_img').attr('src', attachment.url);
+                $('#page_header_url').val(attachment.url);
 
             })
             .open();
