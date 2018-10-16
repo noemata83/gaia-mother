@@ -2162,8 +2162,6 @@ strong {
   display: none; }
 
 .woocommerce-checkout #main, .woocommerce-cart #main {
-  padding-top: 15rem;
-  width: 80%;
   margin: 0 auto; }
 
 .woocommerce-checkout input, .woocommerce-checkout textarea, .woocommerce-cart input, .woocommerce-cart textarea {
