@@ -1,43 +1,78 @@
-.page {
-  &__header, p.page__header {
-    font-size: 3.3rem;
-    margin-bottom: 2rem;
-    margin-top: 0;
+.type-page.page {
+  .page {
+    &__header, p.page__header {
+      font-size: 3.3rem;
+      margin-bottom: 2rem;
+      margin-top: 0;
+    }
+
+    &__row {
+      display: flex;
+      width: 100%;
+      @include respond(tab-port) {
+        display: block;
+      }
+    }
+
+    &__column {
+      flex-basis: 45%;
+      flex-grow: 1;
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+    }
+
   }
 
   h2 {
-    font-size: 4rem;
+      font-size: 4rem;
+      font-weight: bold;
+      padding: 2rem 0;
+  }
+
+  h3 {
+    font-size: 3rem;
     font-weight: bold;
-    padding: 2rem 0;
   }
 
   p {
     margin: 1rem 0;
   }
-
-  section {
-    padding: 2rem 0;
-    border-bottom: 1px solid #d8dee1;
-  }
-
-  &__row {
-    display: flex;
+   
+  img {
     width: 100%;
-    @include respond(tab-port) {
-      display: block;
+  }
+    
+    
+  section {
+    border-bottom: 1px solid #d8dee1;
+    padding: 2rem 0;
+  }
+
+  .stormtracker {
+    color: white;
+    background-image: url('./assets/img/storm_tracker_background.jpg');
+    width: 100%;
+    padding: 4rem;
+    padding-bottom: 43%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    h3 {
+      font-size: 6rem;
+      text-decoration: underline;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      width: 36%;
+      font-size: 2rem;
     }
   }
-  
-  &__column {
-    flex-basis: 45%;
-    flex-grow: 1;
-    &:not(:last-child) {
-      margin-right: 2%;
-    }
-  }
+
 
   .entry-content {
     margin: 0;
   }
 
-}
+  }
