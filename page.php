@@ -12,16 +12,8 @@
  * @package gaia-mother
  */
 
-get_header();
-?>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-		<div class="blog__header">
-					<p class="blog__header-copy">
-						<?php echo get_field('header_copy',  get_option('page_for_posts'));?>
-					</p>
-				</div>
-			<div class="blog__content">
+get_header( 'page' );
+		?>
 		<?php
 		while ( have_posts() ) :
 			the_post();

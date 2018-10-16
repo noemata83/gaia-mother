@@ -16,13 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-  <?php wp_head();
-  do_action( 'woocommerce_before_main_content' );
-  ?>
 </head>
 
-<body <?php body_class('woocommerce');?>>
+<body <?php body_class();?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gaia-mother' ); ?></a>
 
@@ -47,11 +43,11 @@
 
 
 	<div id="content" class="site-content">
-		<main id="main">
-  		<div class="masthead" style="background-image: url('<?php echo get_option('shop_header_image') ? get_option('shop_header_image') : get_theme_file_uri('assets/img/shop_header.jpg')?>');">
+    <main id="main">
+      <div class="masthead" style="background-image: url('<?php echo get_option('blog_header_image') ? get_option('blog_header_image') : get_theme_file_uri('assets/img/shop_header.jpg')?>');">
 				<div class="masthead__copy">
                     <p>
-						<?php echo get_option('shop_header_text');?>
+						<?php echo get_option('blog_header_text');?>
 					</p>
 				</div>
 			</div>

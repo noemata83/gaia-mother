@@ -281,3 +281,124 @@ function output_shopping_cart_icon() {
 }
 
 add_action('widgets_init', create_function('', 'return register_widget("gaia_related_products");'));
+
+add_action('admin_menu', 'add_gcf_interface');
+
+function add_gcf_interface() {
+	add_options_page('Global Custom Fields', 'Global Custom Fields', '8', 'functions', 'editglobalcustomfields');
+
+	function editglobalcustomfields() {
+
+		if(function_exists( 'wp_enqueue_media' )){
+			wp_enqueue_media();
+		}else{
+			wp_enqueue_style('thickbox');
+			wp_enqueue_script('media-upload');
+			wp_enqueue_script('thickbox');
+		}		
+		?>
+		<div class='wrap'>
+		<h2>Global Custom Fields</h2>
+		<form method="post" action="options.php">
+		<?php wp_nonce_field('update-options') ?>
+		
+		<p><strong>Shop Header Text:</strong><br />
+		<input type="text" name="shop_header_text" size="45" value="<?php echo get_option('shop_header_text'); ?>" /></p>
+	
+		<p><strong>Shop Header Image:</strong><br />
+			<p>Ideal image dimensions: 1440 x 360px</p>
+			<img class="header_logo" id="shop_header_img" src="<?php echo get_option('shop_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="shop_header_url" type="text" name="shop_header_image" size="60" value="<?php echo get_option('shop_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="shop_header_upload">Upload</a>
+	</p> 
+
+		<p><strong>Blog Header Text:</strong><br />
+		<input type="text" name="blog_header_text" size="45" value="<?php echo get_option('blog_header_text'); ?>" /></p>
+	
+		<p><strong>Blog Header Image:</strong><br />
+			<p>Ideal image dimensions: 1440 x 360px</p>
+			<img class="header_logo" id="blog_header_img" src="<?php echo get_option('blog_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="blog_header_url" type="text" name="blog_header_image" size="60" value="<?php echo get_option('blog_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="blog_header_upload">Upload</a>
+		</p> 
+
+		<p><strong>Page Header Text:</strong><br />
+		<input type="text" name="page_header_text" size="45" value="<?php echo get_option('page_header_text'); ?>" /></p>
+		<p><strong>Page Header Image:</strong><br />
+			<p>Ideal image dimensions: 1440 x 360px</p>
+			<img class="header_logo" id="page_header_img" src="<?php echo get_option('page_header_image'); ?>" width="720" height="180"/><br/>
+			<input class="header_logo_url" id="page_header_url" type="text" name="page_header_image" size="60" value="<?php echo get_option('page_header_image'); ?>">
+			<a href="#" class="header_logo_upload" id="page_header_upload">Upload</a>
+		</p>
+
+
+		<p><input type="submit" name="Submit" value="Update Options" /></p>
+	
+		<input type="hidden" name="action" value="update" />
+		<input type="hidden" name="page_options" value="shop_header_text,blog_header_text,page_header_text, shop_header_image, blog_header_image, page_header_image" />
+	
+		</form>
+		</div>
+		<script>
+    jQuery(document).ready(function($) {
+        $('#shop_header_upload').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Custom Image',
+                button: {
+                    text: 'Upload Image'
+                },
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#shop_header_img').attr('src', attachment.url);
+                $('#shop_header_url').val(attachment.url);
+
+            })
+            .open();
+        });
+        $('#blog_header_upload').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Custom Image',
+                button: {
+                    text: 'Upload Image'
+                },
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#blog_header_img').attr('src', attachment.url);
+                $('#blog_header_url').val(attachment.url);
+
+            })
+            .open();
+        });
+        $('#page_header_upload').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Custom Image',
+                button: {
+                    text: 'Upload Image'
+                },
+                multiple: false  // Set this to true to allow multiple files to be selected
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#page_header_img').attr('src', attachment.url);
+                $('#page_header_url').val(attachment.url);
+
+            })
+            .open();
+        });
+    });
+		</script>
+		<?php
+	}
+}
+
+?>
