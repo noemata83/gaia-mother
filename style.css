@@ -2127,7 +2127,7 @@ strong {
   flex-basis: 45%;
   flex-grow: 1; }
   .type-page.page .page__column:not(:last-child) {
-    margin-right: 2%; }
+    margin-right: 10%; }
 
 .type-page.page h2 {
   font-size: 4rem;
