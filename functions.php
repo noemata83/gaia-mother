@@ -280,9 +280,13 @@ function output_shopping_cart_icon() {
 	';
 }
 
+remove_filter('the_content', 'wpautop');
+
+
 add_action('widgets_init', create_function('', 'return register_widget("gaia_related_products");'));
 
 add_action('admin_menu', 'add_gcf_interface');
+
 
 function add_gcf_interface() {
 	add_options_page('Global Custom Fields', 'Global Custom Fields', '8', 'functions', 'editglobalcustomfields');

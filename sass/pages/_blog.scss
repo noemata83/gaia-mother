@@ -36,8 +36,10 @@
         #main {
             padding-top: 0;
         }
-        @include respond(phone) {
+        @include respond(tab-port) {
             margin: 0;
+            flex-basis: 100%;
+            width: 100%;
         }
     }
     &__divider {
@@ -50,6 +52,10 @@
     &__sidebar {
         flex-basis: 25%;
         padding-top: 8rem;
+        @include respond(tab-port) {
+            width: 100%;
+            flex-basis: 100%;
+        }
     }
 
     &__post {
