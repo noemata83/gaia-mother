@@ -94,6 +94,9 @@
         background-position: 50%;
         background-position-y: 0%;
         padding-bottom: 40%;
+        @include respond(big-desktop) {
+            background-position-y: bottom;
+        }
         &__text {
             text-align: center;
             position: absolute;

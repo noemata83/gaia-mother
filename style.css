@@ -1873,6 +1873,9 @@ strong {
     background-position: 50%;
     background-position-y: 0%;
     padding-bottom: 40%; }
+    @media only screen and (min-width: 112.5em) {
+      #about .mission {
+        background-position-y: bottom; } }
     #about .mission__text {
       text-align: center;
       position: absolute;
