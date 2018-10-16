@@ -47,7 +47,9 @@
 .single-post {
     .post {
         &__category {
-            font-size: 4rem;
+            a{ 
+                font-size: 5rem;
+            }
         }
         &__content {
             p {

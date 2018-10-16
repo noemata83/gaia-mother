@@ -9,51 +9,23 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				gaia_mother_posted_on();
-				gaia_mother_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php gaia_mother_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'gaia-mother' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gaia-mother' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php gaia_mother_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<div class="blog__post">
+    <div class="post__frontmatter">
+        <div class="post__category">
+            <?php the_category();?>
+        </div>
+        <div class="post__title">
+            <a href="<?php the_permalink();?>"><?php the_title();?></a>
+        </div>
+        <hr class="blog__divider">
+        <div class="post__author">
+            <i class="fas fa-user"></i> By <?php the_author_posts_link(); ?>
+        </div>
+        <div class="post__comments">
+            <i class="fas fa-comments"></i> <?php comments_number();?>
+        </div>
+    </div>
+    <div class="post__content">
+        <?php the_excerpt(); ?>
+    </div>
+</div>

@@ -1057,8 +1057,8 @@ strong {
 .post__content {
   padding: 2rem 0 4.5rem 0; }
 
-.single-post .post__category {
-  font-size: 4rem; }
+.single-post .post__category a {
+  font-size: 5rem; }
 
 .single-post .post__content p {
   text-align: justify;
