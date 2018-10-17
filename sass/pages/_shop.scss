@@ -211,6 +211,8 @@
 .woocommerce .site-content .textwidget ul {
   padding-bottom: 2px;
   border-bottom: 1px solid #d8dee1;
+  list-style-position: outside;
+  padding-left: 2rem;
 }
 
 .woocommerce .site-content .textwidget li {
