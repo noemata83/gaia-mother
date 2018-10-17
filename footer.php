@@ -49,23 +49,18 @@
 		</div>
 		<div class="footer__social">
 			<div class="footer__socialIcon">
-				<i class="fab fa-facebook-f"></i>
+				<a href="https://www.facebook.com/gaiaenterprisesinc/"><i class="fab fa-facebook-f"></i></a>
 			</div>
 			<div class="footer__socialIcon">
-				<i class="fab fa-twitter"></i>
+				<a href="https://twitter.com/gaiasafe"><i class="fab fa-twitter"></i></a>
 			</div>
 			<div class="footer__socialIcon">
-				<i class="fab fa-instagram"></i>
+				<a href="https://www.instagram.com/gaiasafe/"><i class="fab fa-instagram"></i></a>
 			</div>
 		</div>
-		<div><?php echo $_SERVER["SERVER_ADDR"] ?></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<?php if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) { ?>
-	<script id="__bs_script__">//<![CDATA[
-    	document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
-	//]]></script>
-<?php }
+<?php
  wp_footer(); ?>
 
 </body>

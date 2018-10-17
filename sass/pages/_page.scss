@@ -4,6 +4,8 @@
       font-size: 3.3rem;
       margin-bottom: 2rem;
       margin-top: 0;
+      line-height: 1;
+      font-weight: bold;
     }
 
     &__row {
@@ -41,6 +43,7 @@
 
   h3 {
     font-size: 3rem;
+    margin-bottom: 1rem;
     font-weight: bold;
   }
 
@@ -91,7 +94,7 @@
 
 }
 
-.locator {
+.locator, .type-page.page .locator {
   width: 100%;
   background-image: url('assets/img/gaia_map.jpg');
   background-size: cover;

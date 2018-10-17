@@ -73,6 +73,7 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 
 		// Add support for image gallery
 		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
 
 		/**
 		 * Add support for core custom logo.
@@ -202,9 +203,8 @@ function woo_init() {
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 	remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
-	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-	remove_action( 'woocommerce_after_single_product_summary', array( 'WPEX_WooCommerce_Config', 'upsell_display' ), 15 );
-	add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_images', 40);
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );	add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_images', 40);
 	add_action( 'woocommerce_single_product_summary', 'divider', 15);
 	add_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
 	add_action( 'woocommerce_single_variation', 'woocommerce_template_single_add_to_cart', 20 );

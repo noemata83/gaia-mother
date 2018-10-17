@@ -1039,7 +1039,7 @@ input[type="submit"], button {
   padding-bottom: 1rem; }
   .post__category a, .post__category a:link, .post__category a:visited {
     color: #00a0e0;
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase; }
@@ -1103,7 +1103,7 @@ input[type="submit"], button {
   color: #00a0e0; }
 
 .wpp-list li {
-  padding-bottom: 3rem;
+  padding: 2rem 0;
   border-bottom: 1px solid #d8dee1; }
 
 .woocommerce .gaia_product, .gaia_product {
@@ -1416,7 +1416,7 @@ input[type="submit"], button {
           display: none; } }
     .footer__menu li {
       margin-bottom: 2rem; }
-      .footer__menu li a:link, .footer__menu li a:visited {
+      .footer__menu li a, .footer__menu li a:link, .footer__menu li a:visited {
         color: inherit;
         text-decoration: none; }
       @media only screen and (max-width: 37.5em) {
@@ -1484,10 +1484,11 @@ input[type="submit"], button {
     text-align: center;
     padding: 1.3rem 1rem;
     background-color: #97989a;
-    color: #edefef;
     border-radius: 100%; }
     .footer__socialIcon:not(:last-child) {
       margin-right: 2rem; }
+    .footer__socialIcon a, .footer__socialIcon a:link, .footer__socialIcon a:visited {
+      color: #edefef; }
   .footer__mobile-break {
     display: none; }
     @media only screen and (max-width: 37.5em) {
@@ -1495,7 +1496,8 @@ input[type="submit"], button {
         display: initial; } }
 
 #main {
-  padding-top: 10.5rem; }
+  padding-top: 10.5rem;
+  display: block; }
   #main.front-page section {
     margin: 0 10%; }
     @media only screen and (max-width: 56.25em) {
@@ -1861,7 +1863,8 @@ input[type="submit"], button {
       #about .hero__lead {
         font-size: 4.4rem; } }
     #about .hero__copy {
-      font-size: 2.4rem; }
+      font-size: 2.4rem;
+      line-height: 1; }
       @media only screen and (max-width: 56.25em) {
         #about .hero__copy {
           display: none; } }
@@ -2213,7 +2216,9 @@ input[type="submit"], button {
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
   margin-bottom: 2rem;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1;
+  font-weight: bold; }
 
 .type-page.page .page__row {
   display: flex;
@@ -2242,6 +2247,7 @@ input[type="submit"], button {
 
 .type-page.page h3 {
   font-size: 3rem;
+  margin-bottom: 1rem;
   font-weight: bold; }
 
 .type-page.page p {
@@ -2277,7 +2283,7 @@ input[type="submit"], button {
 .type-page.page .entry-content {
   margin: 0; }
 
-.locator {
+.locator, .type-page.page .locator {
   width: 100%;
   background-image: url("assets/img/gaia_map.jpg");
   background-size: cover;
@@ -2287,19 +2293,19 @@ input[type="submit"], button {
   position: relative;
   margin-bottom: 2rem;
   cursor: pointer; }
-  .locator__layer {
+  .locator__layer, .type-page.page .locator__layer {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  .locator h2 {
+  .locator h2, .type-page.page .locator h2 {
     padding-left: 2rem;
     padding-bottom: 1rem;
     text-align: left;
     color: white;
     position: relative;
     z-index: 2; }
-  .locator p {
+  .locator p, .type-page.page .locator p {
     position: relative;
     padding-left: 2rem;
     text-decoration: underline;
@@ -2308,7 +2314,7 @@ input[type="submit"], button {
     color: white;
     margin: 0;
     padding-bottom: 2rem; }
-  .locator__disclaimer {
+  .locator__disclaimer, .type-page.page .locator__disclaimer {
     padding-top: 1rem;
     border-top: 1px solid #d8dee1; }
 

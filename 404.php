@@ -7,17 +7,8 @@
  * @package gaia-mother
  */
 
-get_header();
+get_header( 'page' );
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main blog">
-			<div class="blog__header">
-					<p class="blog__header-copy">
-					</p>
-				</div>
-			<div class="blog__content">
-				<div class="blog__post-column">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'gaia-mother' ); ?></h1>
 				</header><!-- .page-header -->

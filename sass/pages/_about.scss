@@ -32,6 +32,7 @@
         }
         &__copy {
             font-size: 2.4rem;
+            line-height: 1;
             @include respond(tab-port) {
                 display: none;
             }

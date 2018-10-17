@@ -26,8 +26,7 @@ do_action( 'woocommerce_after_main_content' );
   <div class="footer__menu-left">
     <ul class="footer__menu">
       <li><a href="/">Home</a></li>
-      <li><a href="/news-events/">Blog</a></li>
-      <li><a href="/press/">Press Kit</a></li>
+      <li><a href="/news-events/">News & Events</a></li>
       <li><a href="/locator/">Store Locator</a></li>
       <span class="footer__menu-mobile">
         <li><a href="/contact/">Contact Us</a></li>
@@ -39,7 +38,7 @@ do_action( 'woocommerce_after_main_content' );
   <div class="footer__menu-right">
     <ul class="footer__menu">
       <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="mailto:info@gaiausa.com" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
+      <li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
       <li><a href="/about/">About Us</a></li>
     </ul>
   </div>
@@ -59,11 +58,7 @@ do_action( 'woocommerce_after_main_content' );
   </div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
-<?php if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) { ?>
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-<?php }
+<?php
 wp_footer(); ?>
 
 </body>
