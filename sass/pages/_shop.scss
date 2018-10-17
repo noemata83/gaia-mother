@@ -201,3 +201,28 @@
     font-size: 2rem;
   }
 }
+
+.woocommerce h2.widget-title {
+  font-size: 3rem;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.woocommerce .site-content .textwidget ul {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #d8dee1;
+}
+
+.woocommerce .site-content .textwidget li {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.woocommerce .site-content .gallery {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #d8dee1;
+}
+
+.woocommerce .blog__sidebar {
+  padding-top: 5.5rem;
+}

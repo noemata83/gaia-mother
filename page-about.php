@@ -21,7 +21,7 @@ get_header();
     <section class="sustainability">
         <h2>A proven track record in sustainability</h2>
         <p>
-            Our belief in the importance of sustainable products is why we create. SafePaw was developed in 1987 out of necessity. Nothing in the market met our standards for safety, so we created the product we could trust. Our work continues with new products that uphold our commitment to sustainability.
+            Our belief in the importance of sustainable products is why we create. Safe Paw was developed in 1987 out of necessity. Nothing in the market met our standards for safety, so we created the product we could trust. Our work continues with new products that uphold our commitment to sustainability.
         </p>
     </section>
     <div class="graphic">&nbsp;</div>

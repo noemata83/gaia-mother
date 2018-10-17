@@ -94,6 +94,9 @@
     }
 
     &__address {
+        a, a:link, a:visited {
+            color: inherit;
+        }
         @include respond(phone) {
             display: none;
         }
