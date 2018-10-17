@@ -931,7 +931,8 @@ strong {
 input[type="submit"], button {
   font-size: 2rem;
   background: transparent;
-  border: none; }
+  border: none;
+  cursor: pointer; }
 
 body {
   margin: 0; }
@@ -996,7 +997,8 @@ strong {
 input[type="submit"], button {
   font-size: 2rem;
   background: transparent;
-  border: none; }
+  border: none;
+  cursor: pointer; }
 
 .masthead {
   height: 36rem;
@@ -2047,6 +2049,14 @@ input[type="submit"], button {
     .blog__sidebar {
       width: 100%;
       flex-basis: 100%; } }
+  .blog__sidebar .locator {
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .blog__sidebar .locator h2 {
+      font-weight: bold;
+      text-decoration: underline; }
 
 .blog__post {
   border-bottom: 1px solid #d8dee1;
@@ -2275,7 +2285,8 @@ input[type="submit"], button {
   border: none;
   padding: 0;
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  cursor: pointer; }
   .locator__layer {
     position: absolute;
     width: 100%;

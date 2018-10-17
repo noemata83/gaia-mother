@@ -56,6 +56,17 @@
             width: 100%;
             flex-basis: 100%;
         }
+
+        .locator {
+            min-height: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__post {
