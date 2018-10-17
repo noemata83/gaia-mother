@@ -33,6 +33,7 @@
     }
     &__logo {
         width: 100%;
+        flex-shrink: 0;
         &-container {
             flex-basis: 22rem;
             position: relative;
