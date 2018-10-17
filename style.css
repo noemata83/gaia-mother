@@ -1675,7 +1675,10 @@ input[type="submit"], button {
       font-size: 1.6rem;
       line-height: 1.5;
       list-style: decimal;
-      list-style-position: inside; }
+      list-style-position: inside;
+      counter-reset: item; }
+      .about__text ol li:before {
+        content: counter(item) ") "; }
       @media only screen and (max-width: 37.5em) {
         .about__text ol li {
           margin-bottom: 2rem; } }
