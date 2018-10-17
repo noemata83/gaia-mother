@@ -45,3 +45,9 @@ em {
 strong {
     font-weight: bold;
 }
+
+input[type="submit"], button {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+}
