@@ -2276,6 +2276,13 @@ input[type="submit"], button {
     .type-page.page .page__column {
       margin-bottom: 2rem; } }
 
+.type-page.page .page__partner-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .type-page.page .page__partner-list li {
+    flex-basis: 40%; }
+
 .type-page.page h2 {
   font-size: 4rem;
   font-weight: bold;
@@ -2285,6 +2292,10 @@ input[type="submit"], button {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold; }
+
+.type-page.page h4 {
+  font-size: 2.4rem;
+  margin: 1rem 0; }
 
 .type-page.page p {
   margin: 1rem 0; }
