@@ -1039,7 +1039,7 @@ input[type="submit"], button {
   padding-bottom: 1rem; }
   .post__category a, .post__category a:link, .post__category a:visited {
     color: #00a0e0;
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase; }
@@ -1103,7 +1103,7 @@ input[type="submit"], button {
   color: #00a0e0; }
 
 .wpp-list li {
-  padding-bottom: 3rem;
+  padding: 2rem 0;
   border-bottom: 1px solid #d8dee1; }
 
 .woocommerce .gaia_product, .gaia_product {
@@ -1416,7 +1416,7 @@ input[type="submit"], button {
           display: none; } }
     .footer__menu li {
       margin-bottom: 2rem; }
-      .footer__menu li a:link, .footer__menu li a:visited {
+      .footer__menu li a, .footer__menu li a:link, .footer__menu li a:visited {
         color: inherit;
         text-decoration: none; }
       @media only screen and (max-width: 37.5em) {
@@ -1861,7 +1861,8 @@ input[type="submit"], button {
       #about .hero__lead {
         font-size: 4.4rem; } }
     #about .hero__copy {
-      font-size: 2.4rem; }
+      font-size: 2.4rem;
+      line-height: 1; }
       @media only screen and (max-width: 56.25em) {
         #about .hero__copy {
           display: none; } }

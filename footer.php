@@ -58,14 +58,9 @@
 				<i class="fab fa-instagram"></i>
 			</div>
 		</div>
-		<div><?php echo $_SERVER["SERVER_ADDR"] ?></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<?php if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) { ?>
-	<script id="__bs_script__">//<![CDATA[
-    	document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
-	//]]></script>
-<?php }
+<?php
  wp_footer(); ?>
 
 </body>
