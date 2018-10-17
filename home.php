@@ -14,7 +14,6 @@
 
 get_header( 'blog' );
 ?>
-				<div class="blog__post-column">
 				<?php
 				if ( have_posts() ) :
 

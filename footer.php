@@ -28,9 +28,8 @@
 		<div class="footer__menu-left">
 			<ul class="footer__menu">
 				<li><a href="/">Home</a></li>
-				<li><a href="/news-events/">Blog</a></li>
-				<li><a href="/press/">Press Kit</a></li>
-				<li><a href="/locator/">Store Locator</a></li>
+				<li><a href="/news-events/">News & Events</a></li>
+				<li><a data-fancybox="" data-type="iframe" data-src="https://hosted.where2getit.com/gaiaenterprises">Store Locator</a></li>
 				<span class="footer__menu-mobile">
 					<li><a href="/contact/">Contact Us</a></li>
 					<li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
@@ -41,7 +40,7 @@
 		<div class="footer__menu-right">
 			<ul class="footer__menu">
 				<li><a href="/contact/">Contact Us</a></li>
-				<li><a href="mailto:info@gaiausa.com" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
+				<li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
 				<li><a href="/about/">About Us</a></li>
 			</ul>
 		</div>
@@ -59,6 +58,7 @@
 				<i class="fab fa-instagram"></i>
 			</div>
 		</div>
+		<div><?php echo $_SERVER["SERVER_ADDR"] ?></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) { ?>
