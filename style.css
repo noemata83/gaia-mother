@@ -2293,6 +2293,10 @@ input[type="submit"], button {
   margin-bottom: 1rem;
   font-weight: bold; }
 
+.type-page.page h4 {
+  font-size: 2.4rem;
+  margin: 1rem 0; }
+
 .type-page.page p {
   margin: 1rem 0; }
 
