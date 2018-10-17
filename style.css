@@ -2276,6 +2276,13 @@ input[type="submit"], button {
     .type-page.page .page__column {
       margin-bottom: 2rem; } }
 
+.type-page.page .page__partner-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .type-page.page .page__partner-list li {
+    flex-basis: 40%; }
+
 .type-page.page h2 {
   font-size: 4rem;
   font-weight: bold;
@@ -2315,12 +2322,6 @@ input[type="submit"], button {
   .type-page.page .stormtracker p {
     width: 36%;
     font-size: 2rem; }
-  .type-page.page .stormtracker__partner-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
-    .type-page.page .stormtracker__partner-list li {
-      flex-basis: 40%; }
 
 .type-page.page .entry-content {
   margin: 0; }

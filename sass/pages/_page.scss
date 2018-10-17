@@ -33,6 +33,15 @@
       }
     }
 
+    &__partner-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        flex-basis: 40%;
+      }
+    }
+
   }
 
   h2 {
@@ -85,15 +94,6 @@
     p {
       width: 36%;
       font-size: 2rem;
-    }
-
-    &__partner-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      li {
-        flex-basis: 40%;
-      }
     }
   }
 
