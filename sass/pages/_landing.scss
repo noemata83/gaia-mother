@@ -206,6 +206,7 @@
             line-height: 1.5;
             list-style: decimal;
             list-style-position: inside;
+            counter-reset: item;
             li {
                 &:before {
                     content: counter(item) ") ";
