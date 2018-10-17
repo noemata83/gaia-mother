@@ -2213,7 +2213,9 @@ input[type="submit"], button {
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
   margin-bottom: 2rem;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1;
+  font-weight: bold; }
 
 .type-page.page .page__row {
   display: flex;
@@ -2242,6 +2244,7 @@ input[type="submit"], button {
 
 .type-page.page h3 {
   font-size: 3rem;
+  margin-bottom: 1rem;
   font-weight: bold; }
 
 .type-page.page p {
@@ -2277,7 +2280,7 @@ input[type="submit"], button {
 .type-page.page .entry-content {
   margin: 0; }
 
-.locator {
+.locator, .type-page.page .locator {
   width: 100%;
   background-image: url("assets/img/gaia_map.jpg");
   background-size: cover;
@@ -2287,19 +2290,19 @@ input[type="submit"], button {
   position: relative;
   margin-bottom: 2rem;
   cursor: pointer; }
-  .locator__layer {
+  .locator__layer, .type-page.page .locator__layer {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
-  .locator h2 {
+  .locator h2, .type-page.page .locator h2 {
     padding-left: 2rem;
     padding-bottom: 1rem;
     text-align: left;
     color: white;
     position: relative;
     z-index: 2; }
-  .locator p {
+  .locator p, .type-page.page .locator p {
     position: relative;
     padding-left: 2rem;
     text-decoration: underline;
@@ -2308,7 +2311,7 @@ input[type="submit"], button {
     color: white;
     margin: 0;
     padding-bottom: 2rem; }
-  .locator__disclaimer {
+  .locator__disclaimer, .type-page.page .locator__disclaimer {
     padding-top: 1rem;
     border-top: 1px solid #d8dee1; }
 
