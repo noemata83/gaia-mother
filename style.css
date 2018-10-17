@@ -1484,10 +1484,11 @@ input[type="submit"], button {
     text-align: center;
     padding: 1.3rem 1rem;
     background-color: #97989a;
-    color: #edefef;
     border-radius: 100%; }
     .footer__socialIcon:not(:last-child) {
       margin-right: 2rem; }
+    .footer__socialIcon a, .footer__socialIcon a:link, .footer__socialIcon a:visited {
+      color: #edefef; }
   .footer__mobile-break {
     display: none; }
     @media only screen and (max-width: 37.5em) {
@@ -1495,7 +1496,8 @@ input[type="submit"], button {
         display: initial; } }
 
 #main {
-  padding-top: 10.5rem; }
+  padding-top: 10.5rem;
+  display: block; }
   #main.front-page section {
     margin: 0 10%; }
     @media only screen and (max-width: 56.25em) {

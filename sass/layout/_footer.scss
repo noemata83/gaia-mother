@@ -146,10 +146,12 @@
         text-align: center;
         padding: 1.3rem 1rem;
         background-color: #97989a;
-        color: #edefef;
         border-radius: 100%;
         &:not(:last-child) {
             margin-right: 2rem;
+        }
+        a, a:link, a:visited {
+            color: #edefef;
         }
     }
     &__mobile-break {

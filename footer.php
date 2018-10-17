@@ -49,13 +49,13 @@
 		</div>
 		<div class="footer__social">
 			<div class="footer__socialIcon">
-				<i class="fab fa-facebook-f"></i>
+				<a href="https://www.facebook.com/gaiaenterprisesinc/"><i class="fab fa-facebook-f"></i></a>
 			</div>
 			<div class="footer__socialIcon">
-				<i class="fab fa-twitter"></i>
+				<a href="https://twitter.com/gaiasafe"><i class="fab fa-twitter"></i></a>
 			</div>
 			<div class="footer__socialIcon">
-				<i class="fab fa-instagram"></i>
+				<a href="https://www.instagram.com/gaiasafe/"><i class="fab fa-instagram"></i></a>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
