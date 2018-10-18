@@ -1018,6 +1018,9 @@ input[type="submit"], button {
     line-height: 1; }
     .masthead__copy p {
       line-height: 1; }
+    @media only screen and (max-width: 22.5em) {
+      .masthead__copy {
+        left: 0; } }
 
 .menu {
   stroke-width: 6px;
@@ -1997,18 +2000,20 @@ input[type="submit"], button {
         width: 100%;
         text-align: center;
         display: block; } }
-  @media only screen and (max-width: 56.25em) {
-    #about .mobile-copy {
-      display: block;
-      padding: 4rem 0rem; } }
-  @media only screen and (max-width: 56.25em) {
-    #about .mobile-copy p {
-      width: 70%;
-      margin: 0 auto;
-      text-align: center; } }
-  @media only screen and (max-width: 37.5em) {
-    #about .mobile-copy p {
-      width: 80%; } }
+  #about .mobile-copy {
+    background-image: linear-gradient(to bottom, white, #d7dde1); }
+    @media only screen and (max-width: 56.25em) {
+      #about .mobile-copy {
+        display: block;
+        padding: 4rem 0rem; } }
+    @media only screen and (max-width: 56.25em) {
+      #about .mobile-copy p {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center; } }
+    @media only screen and (max-width: 37.5em) {
+      #about .mobile-copy p {
+        width: 80%; } }
 
 .blog__header {
   height: 36rem;
@@ -2380,3 +2385,6 @@ input[type="submit"], button {
 
 a .locator h2 {
   text-decoration: none; }
+
+.wpcf7-form input {
+  width: 100% !important; }
