@@ -310,6 +310,9 @@ function add_gcf_interface() {
 		<h2>Global Custom Fields</h2>
 		<form method="post" action="options.php">
 		<?php wp_nonce_field('update-options') ?>
+
+		<p><label for="site_email"><strong>Site Email:</strong></label>
+		<input type="email" name="site_email" size="45" value="<?php echo get_option('site_email'); ?>"/></p>
 		
 		<p><strong>Shop Header Text:</strong><br />
 		<input type="text" name="shop_header_text" size="45" value="<?php echo get_option('shop_header_text'); ?>" /></p>
@@ -344,7 +347,7 @@ function add_gcf_interface() {
 		<p><input type="submit" name="Submit" value="Update Options" /></p>
 	
 		<input type="hidden" name="action" value="update" />
-		<input type="hidden" name="page_options" value="shop_header_text,blog_header_text,page_header_text, shop_header_image, blog_header_image, page_header_image" />
+		<input type="hidden" name="page_options" value="site_email, shop_header_text,blog_header_text,page_header_text, shop_header_image, blog_header_image, page_header_image" />
 	
 		</form>
 		</div>
