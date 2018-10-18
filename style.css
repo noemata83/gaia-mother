@@ -1014,7 +1014,7 @@ input[type="submit"], button {
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    width: 40rem;
+    width: 37rem;
     line-height: 1; }
     .masthead__copy p {
       line-height: 1; }
@@ -1992,8 +1992,7 @@ input[type="submit"], button {
         #about .story__image {
           width: 80%; } }
     #about .story p {
-      margin: 2rem auto;
-      width: 70%; }
+      margin: 2rem auto; }
       @media only screen and (max-width: 37.5em) {
         #about .story p {
           width: 80%; } }
@@ -2317,7 +2316,6 @@ input[type="submit"], button {
   background-image: url("./assets/img/storm_tracker_background.jpg");
   width: 100%;
   padding: 4rem;
-  padding-bottom: 43%;
   background-size: contain;
   background-repeat: no-repeat; }
   .type-page.page .stormtracker h3 {
