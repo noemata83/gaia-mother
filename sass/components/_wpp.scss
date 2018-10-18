@@ -9,11 +9,11 @@
     &-list {
         li a, li a:link {
             text-decoration: none;
-            color: #00a0e0;
+            color: $color-blue;
         }
         li {
             padding: 2rem 0;
-            border-bottom: 1px solid #d8dee1;
+            border-bottom: 1px solid $color-light-gray;
         }
     }
 }

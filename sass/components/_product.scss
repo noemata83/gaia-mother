@@ -1,6 +1,6 @@
 .woocommerce .gaia_product, .gaia_product {
     display: flex;
-    border-bottom: 1px solid #d8dee1;
+    border-bottom: 1px solid $color-light-gray;
     padding: 2rem;
     @include respond(phone) {
         display: block;

@@ -181,7 +181,7 @@
 }
 
 .woocommerce-account.woocommerce-MyAccount-navigation {
-  background-color: #d8dee1;
+  background-color: $color-light-gray;
   padding: 4rem 2rem;
 }
 
@@ -210,7 +210,7 @@
 
 .woocommerce .site-content .textwidget ul {
   padding-bottom: 2px;
-  border-bottom: 1px solid #d8dee1;
+  border-bottom: 1px solid $color-light-gray;
   list-style-position: outside;
   padding-left: 2rem;
 }
@@ -222,7 +222,7 @@
 
 .woocommerce .site-content .gallery {
   padding-bottom: 2rem;
-  border-bottom: 1px solid #d8dee1;
+  border-bottom: 1px solid $color-light-gray;
 }
 
 .woocommerce .blog__sidebar {

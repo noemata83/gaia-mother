@@ -2,13 +2,13 @@
     &__frontmatter {
         display: flex;
         flex-wrap: wrap;
-        border-bottom: 1px solid #d8dee1;
+        border-bottom: 1px solid $color-light-gray;
     }
     &__category {
         flex-basis: 37%;
         padding-bottom: 1rem;
         a, a:link, a:visited {
-            color: #00a0e0;
+            color: $color-blue;
             font-size: 5rem;
             font-weight: bold;
             text-decoration: none;
@@ -21,13 +21,17 @@
         text-transform: capitalize;
         flex-basis: 60%;
         margin-right: auto;
-        border-left: 1px solid #d8dee1;
+        border-left: 1px solid $color-light-gray;
         padding-left: 2rem;
+        a, a:link, a:visited {
+            color: $color-black;
+
+        }
     }
 
     &__author {
         text-transform: uppercase;
-        color: #00a0e0;
+        color: $color-blue;
         font-size: 2rem;
         flex-basis: 30%;
         padding: 1rem 0;
@@ -35,7 +39,7 @@
 
     &__comments {
         text-transform: uppercase;
-        color: #00a0e0;
+        color: $color-blue;
         font-size: 2rem;
         padding: 1rem;
     }
