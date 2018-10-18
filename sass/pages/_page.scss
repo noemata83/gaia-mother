@@ -93,11 +93,24 @@
       text-decoration: underline;
       font-weight: bold;
       margin-bottom: 2rem;
+      @include respond(phone) {
+        font-size: 4rem;
+      }
     }
 
     p {
       width: 36%;
       font-size: 2rem;
+      @include respond(phone) {
+        width: 85%;
+      }
+    }
+    @include respond(tab-port) {
+      background-size: cover;
+      padding-top: 2rem;
+    }
+    @include respond(phone) {
+      padding: 1rem 2rem;
     }
   }
 

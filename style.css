@@ -2324,9 +2324,22 @@ input[type="submit"], button {
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .type-page.page .stormtracker h3 {
+        font-size: 4rem; } }
   .type-page.page .stormtracker p {
     width: 36%;
     font-size: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .type-page.page .stormtracker p {
+        width: 85%; } }
+  @media only screen and (max-width: 56.25em) {
+    .type-page.page .stormtracker {
+      background-size: cover;
+      padding-top: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .type-page.page .stormtracker {
+      padding: 1rem 2rem; } }
 
 .type-page.page .entry-content {
   margin: 0; }
