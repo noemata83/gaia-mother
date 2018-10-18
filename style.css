@@ -2285,7 +2285,8 @@ input[type="submit"], button {
 .type-page.page .page__partner-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  list-style: none; }
   .type-page.page .page__partner-list li {
     flex-basis: 40%; }
 
