@@ -29,7 +29,7 @@
 			<ul class="footer__menu">
 				<li><a href="/">Home</a></li>
 				<li><a href="/news-events/">News & Events</a></li>
-				<li><a data-fancybox="" data-type="iframe" data-src="https://hosted.where2getit.com/gaiaenterprises">Store Locator</a></li>
+				<li><a style="cursor:pointer;" data-fancybox="" data-type="iframe" data-src="https://hosted.where2getit.com/gaiaenterprises">Store Locator</a></li>
 				<span class="footer__menu-mobile">
 					<li><a href="/contact/">Contact Us</a></li>
 					<li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
