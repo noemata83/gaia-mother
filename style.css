@@ -2312,6 +2312,9 @@ input[type="submit"], button {
 .type-page.page .payment_method_ppec_paypal img {
   width: initial; }
 
+.type-page.page ul {
+  list-style: disc; }
+
 .type-page.page section {
   border-bottom: 1px solid #d8dee1;
   padding: 2rem 0; }
