@@ -37,9 +37,6 @@
         &-container {
             flex-basis: 22rem;
             position: relative;
-            @include respond(phone) {
-                flex-basis: 13rem;
-            }
         }
     }
     &__tagline {
@@ -90,7 +87,6 @@
     }
     @include respond(tab-port) {
         background: white;
-        padding: 2rem 0;
         box-shadow: 0px 4px 8px rgba(0,0,0,.7);
     }
     .shopping-cart-icon {

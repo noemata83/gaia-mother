@@ -1201,9 +1201,6 @@ input[type="submit"], button {
     .header__logo-container {
       flex-basis: 22rem;
       position: relative; }
-      @media only screen and (max-width: 37.5em) {
-        .header__logo-container {
-          flex-basis: 13rem; } }
   .header__tagline {
     color: #1e8234;
     font-size: 1.8rem;
@@ -1245,7 +1242,6 @@ input[type="submit"], button {
   @media only screen and (max-width: 56.25em) {
     .header {
       background: white;
-      padding: 2rem 0;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); } }
   .header .shopping-cart-icon {
     fill: #333;
@@ -2250,6 +2246,9 @@ input[type="submit"], button {
 
 .woocommerce .blog__sidebar {
   padding-top: 5.5rem; }
+
+#add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
+  width: initial; }
 
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
