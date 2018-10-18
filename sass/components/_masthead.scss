@@ -17,5 +17,8 @@
         p {
             line-height: 1;
         }
+        @include respond(small-phone) {
+            left: 0;
+        }
     }
 }

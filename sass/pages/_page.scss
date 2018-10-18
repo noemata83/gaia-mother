@@ -37,6 +37,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      list-style: none;
       li {
         flex-basis: 40%;
       }
@@ -73,6 +74,10 @@
     img {
       width: initial;
     }
+  }
+  
+  ul {
+    list-style: disc;
   }
     
     
@@ -132,6 +137,7 @@
   cursor: pointer;
   &__layer {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
@@ -164,4 +170,8 @@ a .locator {
   h2 {
     text-decoration: none;
   }
+}
+
+.wpcf7-form input {
+  width: 100% !important;
 }

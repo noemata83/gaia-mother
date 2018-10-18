@@ -34,12 +34,6 @@ get_header();
         </div>
         <img class="mission__mobile-graphic" src="<?php echo get_theme_file_uri('/assets/img/child_and_dog.jpg')?>" />
     </section>
-    <section class="values">
-        <h2>Company Values</h2>
-        <p>
-            Gaia is committed to creating sustainable products. We value truth, sustainability, and hard work. Our team members share this passion and work each day to put people, pets, and property first.
-        </p>
-    </section>
     <section class="story">
         <div class="story__text">
             <h2>How We Started</h2>

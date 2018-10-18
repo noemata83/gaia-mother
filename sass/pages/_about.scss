@@ -181,6 +181,7 @@
         }
     }
     .mobile-copy {
+        background-image: linear-gradient(to bottom, white, #d7dde1);
         @include respond(tab-port) {
             display: block;
             padding: 4rem 0rem;

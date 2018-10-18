@@ -1018,6 +1018,9 @@ input[type="submit"], button {
     line-height: 1; }
     .masthead__copy p {
       line-height: 1; }
+    @media only screen and (max-width: 22.5em) {
+      .masthead__copy {
+        left: 0; } }
 
 .menu {
   stroke-width: 6px;
@@ -1201,9 +1204,6 @@ input[type="submit"], button {
     .header__logo-container {
       flex-basis: 22rem;
       position: relative; }
-      @media only screen and (max-width: 37.5em) {
-        .header__logo-container {
-          flex-basis: 13rem; } }
   .header__tagline {
     color: #1e8234;
     font-size: 1.8rem;
@@ -1245,7 +1245,6 @@ input[type="submit"], button {
   @media only screen and (max-width: 56.25em) {
     .header {
       background: white;
-      padding: 2rem 0;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); } }
   .header .shopping-cart-icon {
     fill: #333;
@@ -1360,6 +1359,9 @@ input[type="submit"], button {
   top: 5rem;
   right: 5rem;
   z-index: 2; }
+
+#menu-toggle:hover {
+  background: transparent; }
 
 .footer {
   display: flex;
@@ -2001,18 +2003,20 @@ input[type="submit"], button {
         width: 100%;
         text-align: center;
         display: block; } }
-  @media only screen and (max-width: 56.25em) {
-    #about .mobile-copy {
-      display: block;
-      padding: 4rem 0rem; } }
-  @media only screen and (max-width: 56.25em) {
-    #about .mobile-copy p {
-      width: 70%;
-      margin: 0 auto;
-      text-align: center; } }
-  @media only screen and (max-width: 37.5em) {
-    #about .mobile-copy p {
-      width: 80%; } }
+  #about .mobile-copy {
+    background-image: linear-gradient(to bottom, white, #d7dde1); }
+    @media only screen and (max-width: 56.25em) {
+      #about .mobile-copy {
+        display: block;
+        padding: 4rem 0rem; } }
+    @media only screen and (max-width: 56.25em) {
+      #about .mobile-copy p {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center; } }
+    @media only screen and (max-width: 37.5em) {
+      #about .mobile-copy p {
+        width: 80%; } }
 
 .blog__header {
   height: 36rem;
@@ -2251,6 +2255,9 @@ input[type="submit"], button {
 .woocommerce .blog__sidebar {
   padding-top: 5.5rem; }
 
+#add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
+  width: initial; }
+
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
   margin-bottom: 2rem;
@@ -2281,7 +2288,8 @@ input[type="submit"], button {
 .type-page.page .page__partner-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  list-style: none; }
   .type-page.page .page__partner-list li {
     flex-basis: 40%; }
 
@@ -2307,6 +2315,9 @@ input[type="submit"], button {
 
 .type-page.page .payment_method_ppec_paypal img {
   width: initial; }
+
+.type-page.page ul {
+  list-style: disc; }
 
 .type-page.page section {
   border-bottom: 1px solid #d8dee1;
@@ -2356,6 +2367,7 @@ input[type="submit"], button {
   cursor: pointer; }
   .locator__layer, .type-page.page .locator__layer {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); }
@@ -2381,3 +2393,6 @@ input[type="submit"], button {
 
 a .locator h2 {
   text-decoration: none; }
+
+.wpcf7-form input {
+  width: 100% !important; }
