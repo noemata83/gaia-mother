@@ -2107,7 +2107,8 @@ input[type="submit"], button {
 
 .woocommerce .price {
   display: inline;
-  font-weight: normal; }
+  font-weight: normal;
+  text-decoration: underline; }
 
 .woocommerce button.button.alt {
   display: inline-block;
