@@ -2395,5 +2395,12 @@ input[type="submit"], button {
 a .locator h2 {
   text-decoration: none; }
 
+.page-template .page__header {
+  font-size: 3.3rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1;
+  font-weight: bold; }
+
 .wpcf7-form input {
   width: 100% !important; }
