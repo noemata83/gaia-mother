@@ -51,8 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 html {
   line-height: 1.15;
   /* 1 */
@@ -919,7 +919,7 @@ body {
   font-size: 2rem; }
 
 body, button, input {
-  font-family: "Roboto", Helvetica, Arial, "Liberation Sans", sans-serif; }
+  font-family: "IBM Plex Sans", sans-serif; }
 
 em {
   font-weight: bold;
@@ -985,7 +985,7 @@ body {
   font-size: 2rem; }
 
 body, button, input {
-  font-family: "Roboto", Helvetica, Arial, "Liberation Sans", sans-serif; }
+  font-family: "IBM Plex Sans", sans-serif; }
 
 em {
   font-weight: bold;
@@ -1242,6 +1242,9 @@ input[type="submit"], button {
       margin-left: auto;
       top: inherit;
       transform: none; }
+    .header__menu i {
+      color: #333;
+      font-size: 3.6rem; }
   @media only screen and (max-width: 56.25em) {
     .header {
       background: white;
@@ -1340,7 +1343,7 @@ input[type="submit"], button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: 15rem; }
+    padding-top: 10rem; }
     .mobile-nav .menu li {
       display: block;
       width: 100%;
@@ -2258,6 +2261,9 @@ input[type="submit"], button {
 
 #add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
   width: initial; }
+
+.ordermin {
+  padding-top: 2.4rem; }
 
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;

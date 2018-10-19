@@ -84,6 +84,10 @@
             top: inherit;
             transform: none;
         }
+        i {
+            color: #333;
+            font-size: 3.6rem;
+        }
     }
     @include respond(tab-port) {
         background: white;
@@ -211,7 +215,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-top: 15rem;
+        padding-top: 10rem;
         li {
             display: block;
             width: 100%;
