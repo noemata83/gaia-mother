@@ -49,8 +49,10 @@ if ( post_password_required() ) {
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
-		echo woocommerce_get_product_thumbnail('full');
-	?>
+		?>
+		<div class="product__image">
+			<?php the_post_thumbnail('full'); ?>
+		</div>
 </div>
   <div class="blog__sidebar">
 	<?php /**
