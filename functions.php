@@ -73,7 +73,7 @@ if ( ! function_exists( 'gaia_mother_setup' ) ) :
 
 		// Add support for image gallery
 		add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
+		// add_theme_support( 'wc-product-gallery-slider' );
 
 		/**
 		 * Add support for core custom logo.
