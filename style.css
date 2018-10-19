@@ -2447,3 +2447,12 @@ a .locator h2 {
 
 .wpcf7-form input {
   width: 100% !important; }
+
+.error404 section {
+  padding-top: 0; }
+  .error404 section h2 {
+    padding-top: 0 !important; }
+  .error404 section ul {
+    list-style-position: inside; }
+  .error404 section li {
+    margin: 1rem 0; }
