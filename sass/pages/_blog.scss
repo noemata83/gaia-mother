@@ -23,6 +23,7 @@
         margin-top: -6.5rem;
         background-color: white;
         display: flex;
+        flex-wrap: wrap;
         padding: 4.5rem 4rem;
         @include respond(tab-port) {
             margin: 0 5%;
@@ -52,7 +53,7 @@
 
     &__sidebar {
         flex-basis: 25%;
-        padding-top: 8rem;
+        flex-shrink: 0;
         @include respond(tab-port) {
             width: 100%;
             flex-basis: 100%;
@@ -68,6 +69,9 @@
                 text-decoration: underline;
             }
         }
+    }
+    .blog_sidebar {
+        padding-top: 6rem;
     }
 
     &__post {

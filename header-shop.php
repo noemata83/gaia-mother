@@ -55,5 +55,5 @@
 					</p>
 				</div>
 			</div>
-			<div class="blog__content">
-				<div class="blog__post-column">
+			<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
+				<div class="blog__content">

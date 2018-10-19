@@ -26,7 +26,6 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 <div class="blog__post-column">
   <div class="gaia_product__header">
 		<h1 class="woocommerce-products-header__title"><?php
@@ -51,7 +50,6 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-</div>
 </div>
   <div class="blog__sidebar">
 	<?php /**
