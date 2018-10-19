@@ -2049,8 +2049,8 @@ input[type="submit"], button {
       display: block; } }
 
 .blog__post-column {
-  flex-basis: 75%;
-  margin-right: 5.5rem; }
+  flex-basis: 70%;
+  margin-right: 5rem; }
   .blog__post-column #main {
     padding-top: 0; }
   @media only screen and (max-width: 56.25em) {
