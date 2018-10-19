@@ -1300,10 +1300,27 @@ input[type="submit"], button {
   justify-content: flex-end; }
   .menu li a, .menu li a:visited {
     color: #959595;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     text-decoration: none; }
-  .menu li:not(:last-child) {
-    margin-right: 4rem; }
+  .menu li {
+    position: relative; }
+    .menu li:not(:last-child) {
+      margin-right: 3rem; }
+      @media only screen and (min-width: 112.5em) {
+        .menu li:not(:last-child) {
+          margin-right: 4rem; } }
+    .menu li ul {
+      display: none;
+      background: white;
+      color: #333;
+      position: absolute;
+      top: 3.6rem;
+      left: -3.6rem;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2); }
+      .menu li ul li {
+        padding: 1.5rem 1rem 1rem 1rem; }
+    .menu li.dropdown:hover > ul {
+      display: inherit; }
 
 .mobile-nav {
   display: none;
@@ -1325,7 +1342,7 @@ input[type="submit"], button {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 10rem;
+    margin-top: 6rem;
     padding: 0 4rem; }
   .mobile-nav__socialIcon {
     height: 6.5rem;
@@ -1350,10 +1367,14 @@ input[type="submit"], button {
       font-size: 3rem;
       text-transform: uppercase;
       padding: 4rem;
-      border-top: 1px solid white;
       border-bottom: 1px solid white; }
       .mobile-nav .menu li a, .mobile-nav .menu li a:link, .mobile-nav .menu li a:visited {
         color: white; }
+      .mobile-nav .menu li:first-child {
+        border-top: 1px solid white; }
+      @media only screen and (max-width: 22.5em) {
+        .mobile-nav .menu li {
+          padding: 2rem; } }
   .mobile-nav .shopping-cart-icon {
     fill: white; }
 

@@ -160,12 +160,31 @@
     justify-content: flex-end;
     li a, li a:visited {
         color: #959595;
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         text-decoration: none;
     }
     li {
+        position: relative;
         &:not(:last-child) {
-            margin-right: 4rem;
+            margin-right: 3rem;
+            @include respond(big-desktop) {
+                margin-right: 4rem;
+            }
+        }
+        ul {
+            display: none;
+            background: white;
+            color: $color-black;
+            position: absolute;
+            top: 3.6rem;
+            left: -3.6rem;
+            box-shadow: 0px 8px 8px rgba(0,0,0,.2);
+            li {
+                padding: 1.5rem 1rem 1rem 1rem;
+            }
+        }
+        &.dropdown:hover > ul {
+            display: inherit;
         }
     }
 }
@@ -193,7 +212,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        margin-top: 10rem;
+        margin-top: 6rem;
         padding: 0 4rem;
     }
     &__socialIcon {
@@ -222,10 +241,15 @@
             font-size: 3rem;
             text-transform: uppercase;
             padding: 4rem;
-            border-top: 1px solid white;
             border-bottom: 1px solid white;
             a, a:link, a:visited {
                 color: white;
+            }
+            &:first-child {
+                border-top: 1px solid white;
+            }
+            @include respond(small-phone) {
+                padding: 2rem;
             }
         }
     }
