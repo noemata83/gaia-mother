@@ -41,7 +41,7 @@
 		else :
 			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Sorry!', 'gaia-mother' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. The page you are attempting to reach may still be under construction. Sorry!', 'gaia-mother' ); ?></p>
 			<?php
 		endif;
 		?>

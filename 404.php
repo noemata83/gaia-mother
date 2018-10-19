@@ -9,45 +9,31 @@
 
 get_header( 'page' );
 ?>
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'gaia-mother' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'gaia-mother' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'gaia-mother' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$gaia_mother_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'gaia-mother' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$gaia_mother_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
+	<div class="blog__post-column type-page page">
+					<header class="page-header">
+						<h1 style="font-size: 8rem; font-weight: bold;">404</h1>
+					</header><!-- .page-header -->
+		</div>
+		<div class="blog__sidebar">&nbsp;</div>
+		<div class="blog__post-column type-page page">
+			<hr class="blog__divider" />
+					<div class="page-content">
+						<section>
+							<h2>Page Not Found</h2>
+							<p>The page you are trying to access does not exist on this server.</p>
+							Possible reasons:
+							<ul style="list-style-position: inside;">
+								<li>The page may have been moved or deleted</li>
+								<li>You may have used an outdated or broken link</li>
+								<li>You may have not typed the address (URL) correctly</li>
+							</ul>
+						</section>
+					</div><!-- .page-content -->
+		</div>
+		<div class="blog__sidebar">
+			<hr class="blog__divider" />
+			<img src="<?php echo get_theme_file_uri('/assets/img/404_icon.svg')?>" alt="A slip-up has occurred"/>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
