@@ -34,12 +34,27 @@
     }
 
     &__partner-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       list-style: none;
       li {
+        margin: 1rem 0;
+      }
+    }
+
+    &__retailer-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+      li {
         flex-basis: 40%;
+        margin-bottom: 3rem;
+        &:nth-child(odd) {
+          margin-right: 3rem;
+        }
+        img {
+          width: 70%;
+        }
       }
     }
 

@@ -6,7 +6,7 @@ get_header( 'page' );
 while ( have_posts() ) : 
     the_post();?>
 <div class="blog__post-column">
-    <p class="page__header"><?php echo get_field('header_copy_text');?></p>
+    <h1 class="page__header"><?php echo get_field('header_copy_text');?></h1>
 </div>
 <div class="blog__sidebar"></div>
 <div class="blog__post-column">
