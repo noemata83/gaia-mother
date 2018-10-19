@@ -2040,6 +2040,7 @@ input[type="submit"], button {
   margin-top: -6.5rem;
   background-color: white;
   display: flex;
+  flex-wrap: wrap;
   padding: 4.5rem 4rem; }
   @media only screen and (max-width: 56.25em) {
     .blog__content {
@@ -2066,7 +2067,7 @@ input[type="submit"], button {
 
 .blog__sidebar {
   flex-basis: 25%;
-  padding-top: 8rem; }
+  flex-shrink: 0; }
   @media only screen and (max-width: 56.25em) {
     .blog__sidebar {
       width: 100%;
@@ -2079,6 +2080,9 @@ input[type="submit"], button {
     .blog__sidebar .locator h2 {
       font-weight: bold;
       text-decoration: underline; }
+
+.blog .blog_sidebar {
+  padding-top: 6rem; }
 
 .blog__post {
   border-bottom: 1px solid #d8dee1;
@@ -2251,9 +2255,6 @@ input[type="submit"], button {
 .woocommerce .site-content .gallery {
   padding-bottom: 2rem;
   border-bottom: 1px solid #d8dee1; }
-
-.woocommerce .blog__sidebar {
-  padding-top: 5.5rem; }
 
 #add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
   width: initial; }
