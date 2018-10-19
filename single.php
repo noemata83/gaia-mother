@@ -23,9 +23,9 @@ get_header( 'blog' );
 		</div>
 		<div class="blog__sidebar"></div>
 		<div class="blog__post-column">
-			<hr class="blog__divider" />
 			<div class="post__frontmatter">
 				<?php if (has_post_thumbnail()) { ?>
+					<hr class="blog__divider" />
 					<div class="post__thumbnail">
 						<?php the_post_thumbnail('medium_large'); ?>
 					</div>
