@@ -21,21 +21,26 @@ global $product;
  *
  * @hooked wc_print_notices - 10
  */
-do_action( 'woocommerce_before_single_product' );
 if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
+<div class="blog__post-column">
   <div class="gaia_product__header">
 		<h1 class="woocommerce-products-header__title"><?php
 		the_title(); ?></h1>
-			<div class="gaia_product__header-meta"> 
-				SKU: <strong><?php echo get_post_meta( $post->ID, '_sku', true ); ?></strong>
-				<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ', '</span>'); ?>
-			</div>
+		<div class="gaia_product__header-meta"> 
+			SKU: <strong><?php echo get_post_meta( $post->ID, '_sku', true ); ?></strong>
+			<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ', '</span>'); ?>
+		</div>
 	</div>
+</div>
+<div class="blog__sidebar">
+	<?php do_action( 'woocommerce_before_single_product' ); ?>
+</div>
+<div class="blog__post-column">
   <hr class="blog__divider" />
     <?php
 		/**
