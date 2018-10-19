@@ -172,6 +172,16 @@ a .locator {
   }
 }
 
+.page-template {
+  .page__header {
+    font-size: 3.3rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    line-height: 1;
+    font-weight: bold;
+  }
+}
+
 .wpcf7-form input {
   width: 100% !important;
 }
