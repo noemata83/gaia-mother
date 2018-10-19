@@ -2319,12 +2319,23 @@ input[type="submit"], button {
       margin-bottom: 2rem; } }
 
 .type-page.page .page__partner-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   list-style: none; }
   .type-page.page .page__partner-list li {
-    flex-basis: 40%; }
+    margin: 1rem 0; }
+
+.type-page.page .page__retailer-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center; }
+  .type-page.page .page__retailer-list li {
+    flex-basis: 40%;
+    margin-bottom: 3rem; }
+    .type-page.page .page__retailer-list li:nth-child(odd) {
+      margin-right: 3rem; }
+    .type-page.page .page__retailer-list li img {
+      width: 70%; }
 
 .type-page.page h2 {
   font-size: 4rem;
