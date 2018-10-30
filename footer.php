@@ -22,7 +22,7 @@
 			<p class="footer__address">Gaia Enterprises, Inc.<br>PO Box 220<br/>Southampton, PA 18966<br/>(800)783-7841</p>
 		</div>
 		<div class="footer__address-mobile">
-			<p>Gaia Enterprises, Inc.<br>PO Box 220<br/>Southampton, PA 18966<br/>(800)783-7841</p>
+			<p>Gaia Enterprises, Inc.<br>PO Box 220<br/>Southampton, PA 18966<br/><a href="tel:1-800-783-7841">(800)783-7841</a></p>
 		</div>
 		<div class="footer__spacer">&nbsp;</div>
 		<div class="footer__menu-left">

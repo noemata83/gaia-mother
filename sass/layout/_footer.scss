@@ -1,11 +1,11 @@
 .footer {
     display: flex;
-    padding: 6rem 10% 10rem 10%;
+    padding: 3rem 10% 5rem 10%;
     flex-wrap: wrap;
     color: #97989a;
     background-color: #edefef;
     @include respond(phone) {
-        padding: 6rem 4rem 1rem 4rem;
+        padding: 3rem 4rem 1rem 4rem;
     }
     &__logobox {
         flex-basis: 22%;
@@ -21,6 +21,9 @@
         flex-basis: 30%;
         @include respond(phone) {
             flex-basis: 51%;
+        }
+        @include respond(small-phone) {
+            flex-basis: 40%;
         }
     }
     &__spacer {
@@ -46,7 +49,10 @@
             }
             @include respond(phone) {
                 padding-top: 3rem;
-                flex-basis: 20%;
+                flex-basis: 30%;
+            }
+            @include respond(small-phone) {
+                flex-basis: 38%;
             }
         }
         &-right {
@@ -91,6 +97,9 @@
             font-weight: normal;
             margin-bottom: 0;
         }
+        @include respond(small-phone) {
+            line-height: 1;
+        }
     }
 
     &__address {
@@ -108,6 +117,10 @@
                 display: block;
                 flex-basis: 47%;
                 padding-top: 3rem;
+                margin-right: 6rem;
+            }
+            @include respond(small-phone) {
+                margin-right: 3rem;
             }
         }
     }
@@ -127,6 +140,9 @@
             text-decoration: none;
             color: inherit;
         }
+        @include respond(small-phone) {
+            margin-top: 3rem;
+        }
     }
     
     &__social {
@@ -139,7 +155,9 @@
             flex-basis: 100%;
             margin-top: 4rem;
             justify-content: center;
-
+        }
+        @include respond(small-phone) {
+            margin-top: 2rem;
         }
     }
     &__socialIcon {
