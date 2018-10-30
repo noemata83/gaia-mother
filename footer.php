@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer footer">
 		<div class="footer__logobox">
-			<h3><a href="https://gaiausa.com/"><img src="<?php echo get_theme_file_uri('assets/img/gaia_footer_logo.png')?>" class="footer__logo" alt="Gaia Enterprises"/></a></h3>
+			<h3><a href="https://gaiausa.com/"><img src="<?php echo get_theme_file_uri('assets/img/gaia_footer_logo.svg')?>" class="footer__logo" alt="Gaia Enterprises"/></a></h3>
 		</div>
 		<div class="footer__corporate">
 			<p class="footer__tagline">Where Consciousness Meets Innovation.</p>

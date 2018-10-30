@@ -2,8 +2,8 @@
     display: flex;
     padding: 3rem 10% 5rem 10%;
     flex-wrap: wrap;
-    color: #97989a;
-    background-color: #edefef;
+    background-color: #97989a;
+    color: #edefef;
     @include respond(phone) {
         padding: 3rem 4rem 1rem 4rem;
     }
