@@ -2320,7 +2320,9 @@ input[type="submit"], button {
   padding-top: 0; }
   .woocommerce .blog__sidebar li {
     margin: 0;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    list-style-position: outside;
+    margin-left: 2rem; }
   .woocommerce .blog__sidebar img {
     width: 100%; }
   .woocommerce .blog__sidebar .price {
