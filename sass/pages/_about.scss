@@ -1,8 +1,9 @@
 #about {
     padding-top: 11rem;
+    padding-bottom: 10rem;
 
     @include respond(tab-port) {
-        padding-top: 15rem;
+        padding-top: 11rem;
     }
     @include respond(phone) {
         padding-top: 8rem;
@@ -10,8 +11,14 @@
     .hero {
         background-image: url('assets/img/about_hero.jpg');
         background-position-y: 50%;
+        padding-bottom: 45%;
+        margin-bottom: 10rem;
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
         &__text {
             top: 10%;
+            width: 40%;
             @include respond(phone) {
                 top: 6%;
                 left: 3%;
@@ -19,6 +26,8 @@
             }
         }
         &__lead {
+            margin: 0;
+            width: 49rem;
             @include respond(tab-port) {
                 font-size: 4.8rem;
                 width: 28rem;
@@ -31,8 +40,13 @@
             }
         }
         &__copy {
-            font-size: 2.4rem;
-            line-height: 1;
+            width: 49rem;
+            margin-top: 1rem;
+            p {
+                margin-top: 1rem;
+                font-size: 2.4rem;
+                line-height: 1;
+            }
             @include respond(tab-port) {
                 display: none;
             }
@@ -53,6 +67,13 @@
         margin-bottom: 2rem;
         @include respond(phone) {
             font-size: 4.6rem;
+        }
+    }
+
+    p {
+        margin: 2rem auto;
+        @include respond(tab-port) {
+            text-align: center;
         }
     }
     .sustainability {

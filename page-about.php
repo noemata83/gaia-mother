@@ -5,12 +5,11 @@ get_header();
     <div class="hero">
         <div class="hero__text">
             <p class="hero__lead">
-                Gaia.<br/>
-                We protect what matters.
+                <?php the_field('hero_bold_text'); ?>
             </p>
-            <p class="hero__copy">
-                Few things are more important than our planet. The name Gaia (pronounced GUY-YA) comes from the gnostic term for Mother Earth, symbolic of our unyielding approach to developing safe and effective products for people, pets, and property.
-            </p>
+            <div class="hero__copy">
+                <?php the_field('hero_copy_text'); ?>
+            </div>
         </div>
     </div>
     <section class="mobile-copy">
@@ -18,32 +17,64 @@ get_header();
             Few things are more important than our planet. The name Gaia (pronounced GUY-YA) comes from the gnostic term for Mother Earth, symbolic of our unyielding approach to developing safe and effective products for people, pets, and property.
         </p>
     </section>
-    <section class="sustainability">
-        <h2>A proven track record in sustainability</h2>
-        <p>
-            Our belief in the importance of sustainable products is why we create. Safe Paw was developed in 1987 out of necessity. Nothing in the market met our standards for safety, so we created the product we could trust. Our work continues with new products that uphold our commitment to sustainability.
-        </p>
-    </section>
-    <div class="graphic">&nbsp;</div>
-    <section class="mission">
-        <div class="mission__text">
-            <h2>Our Mission and Vision</h2>
-            <p>
-                Our mission is simple: replace harmful products with safe options. We hope to one day be the most trusted manufacturer of environmentally safe products around the world.
-            </p>    
-        </div>
-        <img class="mission__mobile-graphic" src="<?php echo get_theme_file_uri('/assets/img/child_and_dog.jpg')?>" />
-    </section>
-    <section class="story">
-        <div class="story__text">
-            <h2>How We Started</h2>
-            <p>Gaia USA has always been committed to creating sustainable products. In 1986, our founder received multiple patents for Safe Thaw, the foundation for our #1 selling product, Safe Paw.</p>
-            <p>First sold to power generation companies, construction firms, railroads, and municipal governments, our products helped them comply with EPA standards when no other product could.</p>
-            <p>From the beginning in 1986 to today, our company's commitment to innovative work remains. We will continue to create products that are 100% safe and put pets, people, and property first.</p>
-        </div>
-        <div class="story__image">
-            <img src="<?php echo get_theme_file_uri('assets/img/gaia_family.jpg')?>" alt="The Gaia Family" />
-        </div>
-    </section>
+    <?php if (have_rows('about_content')): 
 
-<?php get_footer();?>   
+    while (have_rows('about_content')): the_row();?>
+        <?php if( get_row_layout() == 'image_right'): ?>
+        <section style="margin-top: 4rem;">
+            <div class="row">
+                <div class="col">
+                    <?php the_sub_field('image_right_text'); ?>
+                </div>
+                <div class="col">
+                    <?php $image = get_sub_field('image_right_image') ?>
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" />
+                </div>
+            </div>
+        </section>
+        <?php elseif (get_row_layout() == 'image_left'): ?>
+        <section style="margin-top: 4rem;">
+            <div class="row">
+                <div class="col">
+                    <?php $image = get_sub_field('image_left_image'); ?>
+                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" />
+                </div>
+                <div class="col">
+                    <?php the_sub_field('image_left_text'); ?>
+                </div>
+            </div>
+        </section>
+        <?php elseif (get_row_layout() == 'full_width_text'): ?>
+        <section style="margin-top: 4rem;">
+            <div class="row">
+                <div class="col-full-width">
+                    <?php the_sub_field('text'); ?>
+                </div>
+            </div>
+        </section>
+        <?php elseif (get_row_layout() == 'floating_text_with_image'):
+            $bgImage = get_sub_field('background_image');
+            $mobileImage = get_sub_field('mobile_fallback_image');
+            ?>
+        <section style="margin-top: 4rem;">
+            <div class="floating" style="background-image: url('<?php echo $bgImage['url'] ?>');">
+                <div class="floating__text">
+                    <?php the_sub_field('copy'); ?>
+                </div>
+            </div>
+            <div class="floating__mobile">
+                <div class="floating__text">
+                    <?php the_sub_field('copy'); ?>
+                </div>
+                <img class="floating__mobile-graphic" src="<?php echo $mobileImage['url'] ?>" />
+            </div>
+        </section>
+        <?php elseif (get_row_layout() == 'full_width_image'): 
+            $image = get_sub_field('image');
+            ?>
+            <div class="graphic" style="background-image: url('<?php echo $image['url'] ?>')"></div>
+        <?php endif;?>
+    <?php endwhile;
+endif;    
+
+get_footer();?>   
