@@ -181,4 +181,7 @@
             display: initial;
         }
     }
+    a, a:link, a:visited {
+        color: inherit;
+    }
 }
