@@ -1575,6 +1575,11 @@ input[type="submit"], button {
     width: 80%;
     margin: 0 auto; }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .floating {
   position: relative;
   background-repeat: no-repeat;

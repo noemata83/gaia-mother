@@ -26,7 +26,7 @@ get_header();
                 <div class="col">
                     <?php the_sub_field('image_right_text'); ?>
                 </div>
-                <div class="col">
+                <div class="col flex-col">
                     <?php $image = get_sub_field('image_right_image') ?>
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" />
                 </div>
@@ -35,7 +35,7 @@ get_header();
         <?php elseif (get_row_layout() == 'image_left'): ?>
         <section style="margin-top: 4rem;">
             <div class="row">
-                <div class="col">
+                <div class="col flex-col">
                     <?php $image = get_sub_field('image_left_image'); ?>
                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" />
                 </div>
