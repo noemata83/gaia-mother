@@ -2427,6 +2427,9 @@ input[type="submit"], button {
   margin: 0 auto;
   padding: 4rem 0; }
 
+.in-stock {
+  margin-bottom: 2rem; }
+
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
   margin-bottom: 2rem;
