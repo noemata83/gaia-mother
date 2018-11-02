@@ -935,7 +935,8 @@ input[type="submit"], button {
   cursor: pointer; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 sub, sup {
   /* Specified in % so that the sup/sup is the
@@ -1366,7 +1367,7 @@ input[type="submit"], button {
       width: 100%;
       font-size: 3rem;
       text-transform: uppercase;
-      padding: 4rem;
+      padding: 3rem;
       border-bottom: 1px solid white; }
       .mobile-nav .menu li a, .mobile-nav .menu li a:link, .mobile-nav .menu li a:visited {
         color: white; }
@@ -1666,6 +1667,10 @@ input[type="submit"], button {
     left: 10%;
     top: 10%;
     width: 33%; }
+    @media only screen and (max-width: 22.5em) {
+      .hero__text {
+        left: 1%;
+        top: 15%; } }
   .hero__lead {
     line-height: 1;
     font-size: 6rem;
@@ -1861,6 +1866,9 @@ input[type="submit"], button {
       .about__validator {
         flex-basis: 45%;
         padding: 1rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .about__validator {
+        justify-content: flex-end; } }
     .about__validator img {
       max-height: 17rem;
       width: auto;
@@ -1877,6 +1885,9 @@ input[type="submit"], button {
       font-weight: bold;
       font-size: 2.4rem;
       text-align: center; }
+      @media only screen and (max-width: 22.5em) {
+        .about__validator p {
+          font-size: 2rem; } }
     .about__validator:not(:last-child) {
       margin-right: 8rem; }
       @media only screen and (max-width: 56.25em) {
@@ -2063,10 +2074,10 @@ input[type="submit"], button {
   #about .graphic {
     background-image: url("assets/img/about_landscape.jpg");
     width: 100%;
-    padding-bottom: 60%; }
+    padding-bottom: 44%; }
     @media only screen and (max-width: 37.5em) {
       #about .graphic {
-        padding-bottom: 70%; } }
+        padding-bottom: 50%; } }
   #about .mission {
     position: relative;
     background-image: url("assets/img/child_and_pets.jpg");
