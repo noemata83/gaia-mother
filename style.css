@@ -2299,6 +2299,8 @@ input[type="submit"], button {
 
 .woocommerce .woocommerce-product-details__short-description {
   padding-top: 2rem; }
+  .woocommerce .woocommerce-product-details__short-description p {
+    margin-bottom: 2rem; }
 
 .woocommerce .blog__content {
   flex-wrap: wrap; }
@@ -2416,7 +2418,9 @@ input[type="submit"], button {
   width: initial; }
 
 .ordermin {
-  padding-top: 2.4rem; }
+  font-size: 1.17em;
+  font-weight: bold;
+  padding: 2.4rem 0; }
 
 .product__image {
   width: 80%;
