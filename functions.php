@@ -232,7 +232,7 @@ add_filter( 'woocommerce_get_availability', 'custom_override_get_availability', 
  
 // The hook in function $availability is passed via the filter!
 function custom_override_get_availability( $availability, $_product ) {
-if ( $_product->is_in_stock() ) $availability['availability'] = __('<li><strong>In Stock</strong></li>', 'woocommerce');
+if ( $_product->is_in_stock() ) $availability['availability'] = __('<ul><li><strong>In Stock</strong></li></ul>', 'woocommerce');
 return $availability;
 }
 
