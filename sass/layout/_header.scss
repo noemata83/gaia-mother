@@ -178,15 +178,27 @@
             position: absolute;
             left: -3.6rem;
             box-shadow: 0px 8px 8px rgba(0,0,0,.2);
-            li {
+            li, li a {
+                font-size: 1.8rem;
                 padding: 1.5rem 1rem 1rem 1rem;
+                &:not(:last-child) {
+                    margin: 0;
+                }
             }
         }
         &.dropdown:hover > ul {
             display: inherit;
         }
+
+        .dropdown {
+            li, li a  {
+                font-size: 1.8rem;
+            }
+        }
     }
 }
+
+
 
 
 .mobile-nav {
