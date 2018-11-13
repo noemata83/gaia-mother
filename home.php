@@ -12,7 +12,7 @@
  * @package gaia-mother
  */
 
-get_header( 'blog' );
+get_header( );
 ?>
 
 <div id="content" class="site-content">

@@ -1299,7 +1299,7 @@ input[type="submit"], button {
   height: 100%;
   align-items: flex-end;
   justify-content: flex-end; }
-  .menu li a, .menu li a:visited {
+  .menu li, .menu li a, .menu li a:visited {
     color: #959595;
     font-size: 2.2rem;
     text-decoration: none; }
@@ -1315,7 +1315,6 @@ input[type="submit"], button {
       background: white;
       color: #333;
       position: absolute;
-      top: 3.6rem;
       left: -3.6rem;
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2); }
       .menu li ul li {
