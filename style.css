@@ -2596,3 +2596,6 @@ a .locator h2 {
     list-style-position: inside; }
   .error404 section li {
     margin: 1rem 0; }
+
+.page__footerImage {
+  margin-top: -10rem; }

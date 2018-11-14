@@ -39,6 +39,13 @@ get_header( );
 		endwhile; // End of the loop.
 		?>
 			</div> <!-- blog__content-->
+		<?php if (get_field('footer_image')): 
+				$image = get_field('footer_image');
+				?>
+				<div class="page__footerImage">
+					<img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']?>"	/>
+				</div>
+			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
