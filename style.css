@@ -2240,6 +2240,9 @@ input[type="submit"], button {
   border-bottom: 1px solid #d8dee1;
   margin-bottom: 6.5rem; }
 
+.fl-builder .blog__content {
+  display: block; }
+
 .woocommerce .woocommerce-products-header__title {
   font-size: 4.6rem;
   text-align: center;
