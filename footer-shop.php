@@ -30,7 +30,7 @@ do_action( 'woocommerce_after_main_content' );
       <li><a href="/locator/">Store Locator</a></li>
       <span class="footer__menu-mobile">
         <li><a href="/contact/">Contact Us</a></li>
-        <li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
+					<li><a href="mailto:info@gaiausa.com" style="font-size: 1.5rem;">info@gaiausa.com</a></li>
         <li><a href="/about/">About Us</a></li>
       </span>
     </ul>
@@ -38,7 +38,7 @@ do_action( 'woocommerce_after_main_content' );
   <div class="footer__menu-right">
     <ul class="footer__menu">
       <li><a href="/contact/">Contact Us</a></li>
-      <li><a href="mailto:<?php echo get_option('admin_email')?>" style="font-size: 1.5rem"><?php echo get_option('admin_email') ?></a></li>
+      <li><a href="mailto:info@gaiausa.com" style="font-size: 1.5rem;">info@gaiausa.com</a></li>
       <li><a href="/about/">About Us</a></li>
     </ul>
   </div>
