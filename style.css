@@ -1075,19 +1075,19 @@ input[type="submit"], button {
 .post__content {
   padding: 2rem 0 4.5rem 0; }
 
-.single-post .post h2 {
+.single-post .post__category a {
+  font-size: 5rem; }
+
+.single-post .post__content h2 {
   font-size: 3.2rem;
   line-height: 1.4em;
   font-weight: 600;
   padding-bottom: .5em; }
 
-.single-post .post h3 {
+.single-post .post__content h3 {
   font-size: 2.8rem;
   line-height: 1.2;
   font-weight: 600; }
-
-.single-post .post__category a {
-  font-size: 5rem; }
 
 .single-post .post__content p {
   text-align: justify;

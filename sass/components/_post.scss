@@ -51,24 +51,24 @@
 .single-post {
     .post {
 
-        h2 {
-            font-size: 3.2rem;
-            line-height: 1.4em;
-            font-weight: 600;
-            padding-bottom: .5em;
-        }
-
-        h3 {
-            font-size: 2.8rem;
-            line-height: 1.2;
-            font-weight: 600;
-        }
         &__category {
             a{ 
                 font-size: 5rem;
             }
         }
         &__content {
+            h2 {
+                font-size: 3.2rem;
+                line-height: 1.4em;
+                font-weight: 600;
+                padding-bottom: .5em;
+            }
+    
+            h3 {
+                font-size: 2.8rem;
+                line-height: 1.2;
+                font-weight: 600;
+            }
             p {
                 text-align: justify;
                 margin-bottom: 1.6rem;
