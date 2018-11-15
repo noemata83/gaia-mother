@@ -366,17 +366,21 @@
     &__list {
         padding: 6rem 10%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         @include respond(phone) {
             padding: 4rem;
             flex-wrap: wrap;
         }
     }
     &__logobox {
-        flex-basis: 15%;
+        flex-basis: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        &:not(:last-child), &:not(:nth-child(4n+0)) {
+            margin-right: 3rem;
+        }
         @include respond(phone) {
             flex-basis: 40%;
             margin: 5%;

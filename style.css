@@ -1043,7 +1043,7 @@ input[type="submit"], button {
   padding-bottom: 1rem; }
   .post__category a, .post__category a:link, .post__category a:visited {
     color: #00a0e0;
-    font-size: 5rem;
+    font-size: 3.6rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase; }
@@ -1075,6 +1075,17 @@ input[type="submit"], button {
 .post__content {
   padding: 2rem 0 4.5rem 0; }
 
+.single-post .post h2 {
+  font-size: 3.2rem;
+  line-height: 1.4em;
+  font-weight: 600;
+  padding-bottom: .5em; }
+
+.single-post .post h3 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 600; }
+
 .single-post .post__category a {
   font-size: 5rem; }
 
@@ -1091,12 +1102,10 @@ input[type="submit"], button {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 4rem; }
-
-.single-post .post__content li {
-  text-transform: uppercase;
-  padding-bottom: 1.3rem;
-  list-style-image: url("assets/img/check.png");
-  font-weight: bold; }
+  .single-post .post__content ul li {
+    padding-bottom: 1.3rem;
+    list-style-image: url("assets/img/check.png");
+    font-weight: bold; }
 
 .wpp-title {
   font-size: 3rem;
@@ -1935,17 +1944,20 @@ input[type="submit"], button {
 .retailers__list {
   padding: 6rem 10%;
   display: flex;
-  justify-content: space-between; }
+  flex-wrap: wrap;
+  justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .retailers__list {
       padding: 4rem;
       flex-wrap: wrap; } }
 
 .retailers__logobox {
-  flex-basis: 15%;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .retailers__logobox:not(:last-child), .retailers__logobox:not(:nth-child(4n+0)) {
+    margin-right: 3rem; }
   @media only screen and (max-width: 37.5em) {
     .retailers__logobox {
       flex-basis: 40%;
@@ -2202,7 +2214,7 @@ input[type="submit"], button {
       display: block; } }
 
 .blog__post-column {
-  flex-basis: 70%;
+  flex-basis: 68%;
   margin-right: 5rem; }
   .blog__post-column #main {
     padding-top: 0; }
