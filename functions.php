@@ -153,7 +153,7 @@ add_action( 'widgets_init', 'gaia_mother_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gaia_mother_scripts() {
-	wp_enqueue_style( 'gaia-mother-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'gaia-mother-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style('FontAwesome', 'https://use.fontawesome.com/releases/v5.0.7/css/all.css');
 
 	wp_enqueue_script( 'gaia-mother-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
