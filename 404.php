@@ -7,8 +7,18 @@
  * @package gaia-mother
  */
 
-get_header( 'page' );
+get_header();
 ?>
+<div id="content" class="site-content">
+    <main id="main">
+      <div class="masthead" style="background-image: url('<?php echo get_theme_file_uri('assets/img/shop_header.jpg')?>');">
+				<div class="masthead__copy">
+            <p>
+						<?php echo get_option('page_header_text');?>
+					</p>
+				</div>
+			</div>
+			<div class="blog__content">
 	<div class="blog__post-column type-page page">
 					<header class="page-header">
 						<h1 style="font-size: 8rem; font-weight: bold;">404</h1>

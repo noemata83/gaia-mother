@@ -67,6 +67,9 @@
 
   .woocommerce-product-details__short-description {
     padding-top: 2rem;
+    p {
+      margin-bottom: 2rem;
+    }
   }
 
   .blog__content {
@@ -233,11 +236,17 @@
 }
 
 .ordermin {
-  padding-top: 2.4rem;
+  font-size: 1.17em;
+  font-weight: bold;
+  padding: 2.4rem 0;
 }
 
 .product__image {
   width: 80%;
   margin: 0 auto;
   padding: 4rem 0;
+}
+
+.in-stock {
+  margin-bottom: 2rem;
 }

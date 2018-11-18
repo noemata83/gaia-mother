@@ -14,22 +14,21 @@
 
 get_header( );
 		?>
-
+		<?php
+		while ( have_posts() ) :
+			the_post(); ?>
 	<div id="content" class="site-content">
     <main id="main">
-      <div class="masthead" style="background-image: url('<?php echo get_theme_file_uri('assets/img/shop_header.jpg')?>');">
+      <div class="masthead" style="background-image: url('<?php echo has_post_thumbnail() ? get_the_post_thumbnail_url() : get_option('page_header_image');?>');">
 				<div class="masthead__copy">
-            <p>
-						<?php echo get_option('page_header_text');?>
-					</p>
+            <h1>
+					<?php echo the_title();?>
+			</h1>
 				</div>
 			</div>
 			<div class="blog__content">
-		<?php
-		while ( have_posts() ) :
-			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			<?php get_template_part( 'template-parts/content', 'page' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -39,6 +38,13 @@ get_header( );
 		endwhile; // End of the loop.
 		?>
 			</div> <!-- blog__content-->
+		<?php if (get_field('footer_image')): 
+				$image = get_field('footer_image');
+				?>
+				<div class="page__footerImage">
+					<img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']?>"	/>
+				</div>
+			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

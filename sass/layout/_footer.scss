@@ -27,7 +27,7 @@
         }
     }
     &__spacer {
-        flex-basis: 10%;
+        flex-basis: 5%;
         @include respond(tab-port) {
             flex-basis: 5%;
         }
@@ -42,12 +42,8 @@
         }
         &-left {
             padding-top: 5rem;
-            flex-basis: 20%;
+            flex-basis: 18%;
             @include respond(tab-port) {
-                flex-basis: 18%;
-                padding-top: 1rem;
-            }
-            @include respond(phone) {
                 padding-top: 3rem;
                 flex-basis: 30%;
             }
@@ -59,9 +55,6 @@
             padding-top: 5rem;
             flex-basis: 15%;
             @include respond(tab-port) {
-                padding-top: 1rem;
-            }
-            @include respond(phone) {
                 display: none;
             }
         }
@@ -71,14 +64,14 @@
                 color: inherit;
                 text-decoration: none;
             }
-            @include respond(phone) {
+            @include respond(tab-port) {
                 margin-bottom: 1rem;
                 font-size: 1.8rem;
             }
         }
         &-mobile {
             display: none;
-            @include respond(phone) {
+            @include respond(tab-port) {
                 display: block;
             }
         }

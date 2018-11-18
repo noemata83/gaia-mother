@@ -33,7 +33,7 @@
     }
 
     &__post-column {
-        flex-basis: 70%;
+        flex-basis: 68%;
         margin-right: 5rem;
         #main {
             padding-top: 0;
@@ -78,4 +78,8 @@
         border-bottom: 1px solid $color-light-gray;
         margin-bottom: 6.5rem;
     }
+}
+
+.fl-builder .blog__content {
+    display: block;
 }

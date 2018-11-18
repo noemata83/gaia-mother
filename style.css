@@ -935,7 +935,8 @@ input[type="submit"], button {
   cursor: pointer; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 sub, sup {
   /* Specified in % so that the sup/sup is the
@@ -1042,7 +1043,7 @@ input[type="submit"], button {
   padding-bottom: 1rem; }
   .post__category a, .post__category a:link, .post__category a:visited {
     color: #00a0e0;
-    font-size: 5rem;
+    font-size: 3.6rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase; }
@@ -1077,6 +1078,17 @@ input[type="submit"], button {
 .single-post .post__category a {
   font-size: 5rem; }
 
+.single-post .post__content h2 {
+  font-size: 3.2rem;
+  line-height: 1.4em;
+  font-weight: 600;
+  padding-bottom: .5em; }
+
+.single-post .post__content h3 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  font-weight: 600; }
+
 .single-post .post__content p {
   text-align: justify;
   margin-bottom: 1.6rem; }
@@ -1090,12 +1102,10 @@ input[type="submit"], button {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 4rem; }
-
-.single-post .post__content li {
-  text-transform: uppercase;
-  padding-bottom: 1.3rem;
-  list-style-image: url("assets/img/check.png");
-  font-weight: bold; }
+  .single-post .post__content ul li {
+    padding-bottom: 1.3rem;
+    list-style-image: url("assets/img/check.png");
+    font-weight: bold; }
 
 .wpp-title {
   font-size: 3rem;
@@ -1298,7 +1308,7 @@ input[type="submit"], button {
   height: 100%;
   align-items: flex-end;
   justify-content: flex-end; }
-  .menu li a, .menu li a:visited {
+  .menu li, .menu li a, .menu li a:visited {
     color: #959595;
     font-size: 2.2rem;
     text-decoration: none; }
@@ -1314,13 +1324,18 @@ input[type="submit"], button {
       background: white;
       color: #333;
       position: absolute;
-      top: 3.6rem;
+      padding: 2rem 0;
       left: -3.6rem;
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2); }
-      .menu li ul li {
+      .menu li ul li, .menu li ul li a {
+        font-size: 1.8rem;
         padding: 1.5rem 1rem 1rem 1rem; }
+        .menu li ul li:not(:last-child), .menu li ul li a:not(:last-child) {
+          margin: 0; }
     .menu li.dropdown:hover > ul {
       display: inherit; }
+    .menu li .dropdown li, .menu li .dropdown li a {
+      font-size: 1.8rem; }
 
 .mobile-nav {
   display: none;
@@ -1364,9 +1379,10 @@ input[type="submit"], button {
     .mobile-nav .menu li {
       display: block;
       width: 100%;
-      font-size: 3rem;
+      font-size: 2.2rem;
+      color: white;
       text-transform: uppercase;
-      padding: 4rem;
+      padding: 3rem;
       border-bottom: 1px solid white; }
       .mobile-nav .menu li a, .mobile-nav .menu li a:link, .mobile-nav .menu li a:visited {
         color: white; }
@@ -1413,7 +1429,7 @@ input[type="submit"], button {
       .footer__corporate {
         flex-basis: 40%; } }
   .footer__spacer {
-    flex-basis: 10%; }
+    flex-basis: 5%; }
     @media only screen and (max-width: 56.25em) {
       .footer__spacer {
         flex-basis: 5%; } }
@@ -1427,12 +1443,8 @@ input[type="submit"], button {
         font-size: 1.8rem; } }
     .footer__menu-left {
       padding-top: 5rem;
-      flex-basis: 20%; }
+      flex-basis: 18%; }
       @media only screen and (max-width: 56.25em) {
-        .footer__menu-left {
-          flex-basis: 18%;
-          padding-top: 1rem; } }
-      @media only screen and (max-width: 37.5em) {
         .footer__menu-left {
           padding-top: 3rem;
           flex-basis: 30%; } }
@@ -1444,22 +1456,19 @@ input[type="submit"], button {
       flex-basis: 15%; }
       @media only screen and (max-width: 56.25em) {
         .footer__menu-right {
-          padding-top: 1rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .footer__menu-right {
           display: none; } }
     .footer__menu li {
       margin-bottom: 2rem; }
       .footer__menu li a, .footer__menu li a:link, .footer__menu li a:visited {
         color: inherit;
         text-decoration: none; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 56.25em) {
         .footer__menu li {
           margin-bottom: 1rem;
           font-size: 1.8rem; } }
     .footer__menu-mobile {
       display: none; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 56.25em) {
         .footer__menu-mobile {
           display: block; } }
   .footer__tagline {
@@ -1666,6 +1675,10 @@ input[type="submit"], button {
     left: 10%;
     top: 10%;
     width: 33%; }
+    @media only screen and (max-width: 22.5em) {
+      .hero__text {
+        left: 1%;
+        top: 15%; } }
   .hero__lead {
     line-height: 1;
     font-size: 6rem;
@@ -1861,6 +1874,9 @@ input[type="submit"], button {
       .about__validator {
         flex-basis: 45%;
         padding: 1rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .about__validator {
+        justify-content: flex-end; } }
     .about__validator img {
       max-height: 17rem;
       width: auto;
@@ -1877,6 +1893,9 @@ input[type="submit"], button {
       font-weight: bold;
       font-size: 2.4rem;
       text-align: center; }
+      @media only screen and (max-width: 22.5em) {
+        .about__validator p {
+          font-size: 2rem; } }
     .about__validator:not(:last-child) {
       margin-right: 8rem; }
       @media only screen and (max-width: 56.25em) {
@@ -1925,17 +1944,20 @@ input[type="submit"], button {
 .retailers__list {
   padding: 6rem 10%;
   display: flex;
-  justify-content: space-between; }
+  flex-wrap: wrap;
+  justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .retailers__list {
       padding: 4rem;
       flex-wrap: wrap; } }
 
 .retailers__logobox {
-  flex-basis: 15%;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  .retailers__logobox:not(:last-child), .retailers__logobox:not(:nth-child(4n+0)) {
+    margin-right: 3rem; }
   @media only screen and (max-width: 37.5em) {
     .retailers__logobox {
       flex-basis: 40%;
@@ -2063,10 +2085,10 @@ input[type="submit"], button {
   #about .graphic {
     background-image: url("assets/img/about_landscape.jpg");
     width: 100%;
-    padding-bottom: 60%; }
+    padding-bottom: 44%; }
     @media only screen and (max-width: 37.5em) {
       #about .graphic {
-        padding-bottom: 70%; } }
+        padding-bottom: 50%; } }
   #about .mission {
     position: relative;
     background-image: url("assets/img/child_and_pets.jpg");
@@ -2192,7 +2214,7 @@ input[type="submit"], button {
       display: block; } }
 
 .blog__post-column {
-  flex-basis: 70%;
+  flex-basis: 68%;
   margin-right: 5rem; }
   .blog__post-column #main {
     padding-top: 0; }
@@ -2230,6 +2252,9 @@ input[type="submit"], button {
 .blog__post {
   border-bottom: 1px solid #d8dee1;
   margin-bottom: 6.5rem; }
+
+.fl-builder .blog__content {
+  display: block; }
 
 .woocommerce .woocommerce-products-header__title {
   font-size: 4.6rem;
@@ -2288,6 +2313,8 @@ input[type="submit"], button {
 
 .woocommerce .woocommerce-product-details__short-description {
   padding-top: 2rem; }
+  .woocommerce .woocommerce-product-details__short-description p {
+    margin-bottom: 2rem; }
 
 .woocommerce .blog__content {
   flex-wrap: wrap; }
@@ -2405,12 +2432,17 @@ input[type="submit"], button {
   width: initial; }
 
 .ordermin {
-  padding-top: 2.4rem; }
+  font-size: 1.17em;
+  font-weight: bold;
+  padding: 2.4rem 0; }
 
 .product__image {
   width: 80%;
   margin: 0 auto;
   padding: 4rem 0; }
+
+.in-stock {
+  margin-bottom: 2rem; }
 
 .type-page.page .page__header, .type-page.page .page p.page__header {
   font-size: 3.3rem;
@@ -2577,3 +2609,6 @@ a .locator h2 {
     list-style-position: inside; }
   .error404 section li {
     margin: 1rem 0; }
+
+.page__footerImage {
+  margin-top: -10rem; }

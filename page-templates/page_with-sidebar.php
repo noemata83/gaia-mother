@@ -2,8 +2,18 @@
 /**
  * Template Name: Page with Sidebar
  */
-get_header( 'page' );
-while ( have_posts() ) : 
+get_header( ); ?>
+<div id="content" class="site-content">
+    <main id="main">
+      <div class="masthead" style="background-image: url('<?php echo get_theme_file_uri('assets/img/shop_header.jpg')?>');">
+				<div class="masthead__copy">
+            <p>
+						<?php echo get_option('page_header_text');?>
+					</p>
+				</div>
+			</div>
+			<div class="blog__content">
+<?php while ( have_posts() ) : 
     the_post();?>
 <div class="blog__post-column">
     <h1 class="page__header"><?php echo get_field('header_copy_text');?></h1>
